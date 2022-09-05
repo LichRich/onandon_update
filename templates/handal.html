@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <!-- <head th:replace="layout/header :: head ('한 달 살이 안내서')"><link
+    rel="stylesheet" href="../static/css/handal.css"></head> -->
+    <head th:fragment="head(title)">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+            crossorigin="anonymous">
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="../static/css/common.css">
+        <link rel="stylesheet" href="../static/css/handal.css">
+        <!-- scripts -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+        <script
+            src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+            integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+            integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+            crossorigin="anonymous"
+            async="async"></script>
+        <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
+        <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
+
+        <title th:text="${title}">도고청년마을</title>
+    </head>
+    <body>
+
+        <!-- <header th:replace="layout/header :: header"></header> -->
+        <header
+            th:fragment="header"
+            class="navbar navbar-custom navbar-expand-lg fixed-top"
+            id="top-navbar">
+            <div class="container">
+                <a href="index.html" class="navbar-brand">
+                    <img src="../static/images/dogoon1000_logo-removebg.png" alt="logo" id="logo">
+                    <span>도고온천마을</span>
+                </a>
+
+                <div id="navmenu">
+                    <ul class="navbar-nav ms-auto text-light">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="village_plan.html" class="nav-link">마을 계획</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="handal.html" class="nav-link">한달살이 안내</a>
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSc7II0zqi03oeYp9HzsGx6WTRrRX1uT4Xt459SVJMlgx-yMqw/viewform"
+                                class="nav-link"
+                                target="_blank">한달살이 신청하기</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link to-archive">ARCHIVE</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="subnav navbar">
+            <ul class="subnav-contents nav">
+                <li class="nav-item">
+                    <a id="to-section-info" href="#section-info" class="nav-link sub-nav-items">참여 정보</a>
+                </li>
+                <li class="nav-item">
+                    <a
+                        id="to-section-schedule"
+                        href="#section-schedule"
+                        class="nav-link sub-nav-items">한 달 일정 안내</a>
+                </li>
+                <li class="nav-item">
+                    <a id="to-section-rule" href="#section-rule" class="nav-link sub-nav-items">생활규칙</a>
+                </li>
+                <li class="nav-item">
+                    <a
+                        id="to-section-materials"
+                        href="#section-materials"
+                        class="nav-link sub-nav-items">준비물</a>
+                </li>
+            </ul>
+        </div>
+
+        <main id="container">
+
+            <section
+                class="section-intro sections"
+                id="section-intro"
+                data-anchor="section-intro">
+                <div class="container handal-title intro-contents">
+                    <h2>도고 한 달 살이 안내서</h2>
+                </div>
+                <div class="backgrounds">
+                    <img src="../static/images/background1_cut.png" alt="배경이미지">
+                </div>
+            </section>
+
+            <section
+                class="container sections"
+                id="section-info"
+                data-anchor="section-info">
+                <div class="big-title" id="join-info-title">
+                    <h2>1. 참여정보</h2>
+                </div>
+                <!-- contents row -->
+                <div class="row contents-row">
+
+                    <div class="section-info-left col-lg-6">
+                        <div class="container poster">
+                            <img src="../static/images/poster.png" alt="포스터">
+                            <div class="poster-desc">
+                                <div class="deposit-title small-titles">
+                                    <h3>보증금 안내</h3>
+                                </div>
+                                <ul class="deposit-contents">
+                                    <li class="deposit-items">원활한 한 달 살이 프로그램 진행과 시설 관리를 위해 보증금이 있습니다.</li>
+                                    <li class="deposit-items sub-deco">금액 : 200,000원 (수료 후, 환급 해드립니다.)</li>
+                                    <li class="deposit-items">한 달 살이 중 중도 하차 등 프로그램 미수료 사유 발생 시,</li>
+                                    <li class="deposit-items no-deco">보증금은 지역사회에 환원됩니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-info-right col-lg-6">
+
+                        <div
+                            id="info-carousel"
+                            class="carousel carousel-dark carousel-fade slide"
+                            data-bs-ride="carousel">
+
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="carousel-item-custom">
+                                        <div class="recruit">
+                                            <div class="recruit-title small-titles">
+                                                <h3>모집</h3>
+                                            </div>
+                                            <div class="recruit-desc">
+                                                <ul class="recruit-contents">
+                                                    <li class="recruit-items">
+                                                        <div class="ri-left">모집 기간 :
+                                                        </div>
+                                                        <div class="ri-right">8월 1일 ~ 8월 31일</div>
+                                                    </li>
+                                                    <li class="recruit-items">
+                                                        <div class="ri-left">모집 대상 :
+                                                        </div>
+                                                        <div class="ri-right">만 19세 ~ 39세 청년(지역 무관)</div>
+                                                    </li>
+                                                    <li class="recruit-items">
+                                                        <div class="ri-left">1차 발표 :
+                                                        </div>
+                                                        <div class="ri-right">9월 1일</div>
+                                                    </li>
+                                                    <li class="recruit-items">
+                                                        <div class="ri-left">2차 면접 :
+                                                        </div>
+                                                        <div class="ri-right">9월 3 ~ 4일(※ 1차 합격자에 한해 일정 안내 예정)</div>
+                                                    </li>
+                                                    <li class="recruit-items">
+                                                        <div class="ri-left">최종 발표 :
+                                                        </div>
+                                                        <div class="ri-right">9월 5일</div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="acts">
+                                            <div class="acts-title small-titles">
+                                                <h3>활동</h3>
+                                            </div>
+                                            <ul class="acts-contents">
+                                                <li class="acts-items">
+                                                    <div class="ai-left">활동 기간 :
+                                                    </div>
+                                                    <div class="ai-right">9월 19일 ~ 10월 14일</div>
+                                                </li>
+                                                <li class="acts-items">
+                                                    <div class="ai-left">수료 기준 :
+                                                    </div>
+                                                    <div class="ai-right">프로그램 80% 초과 참여</div>
+                                                </li>
+                                            </ul>
+                                            <p class="acts-desc">※ 평일 기준이며 주말은 공식 일정이 없습니다. 자유시간!</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <div class="production carousel-item-custom">
+                                        <div class="production-title small-titles">
+                                            <h3>제공</h3>
+                                        </div>
+                                        <ul class="production-contents">
+                                            <li class="p-items">
+                                                <div class="pi-left">숙박 :
+                                                </div>
+                                                <div class="pi-right">2인 1실, 성별 구분하여 사용</div>
+                                            </li>
+                                            <li class="p-items">
+                                                <div class="pi-left">식사 :
+                                                </div>
+                                                <div class="pi-right">평일 기준 점심과 저녁 두 끼 제공(지정 식당을 이용합니다.)</div>
+                                            </li>
+                                            <li class="p-items">
+                                                <div class="pi-left">여행자 보험 :
+                                                </div>
+                                                <div class="pi-right">참가자 전체 사전 가입</div>
+                                            </li>
+                                            <li class="p-items">
+                                                <div class="pi-left">코워킹 스페이스 :
+                                                </div>
+                                                <div class="pi-right">공유 사무실과 프린터 등 이용 가능</div>
+                                            </li>
+                                            <li class="p-items">
+                                                <div class="pi-left">식물 수업 :
+                                                </div>
+                                                <div class="pi-right">식물과 행복한 마을의 일상을 느껴보세요!</div>
+                                            </li>
+                                            <li class="p-items">
+                                                <div class="pi-left">아산청년기업네트워킹 :
+                                                </div>
+                                                <div class="pi-right">아산 청년창업가, 청년기업, 청년단체 등 로컬 네트워킹</div>
+                                            </li>
+                                            <li class="p-items">
+                                                <div class="pi-left">한 달 살이 종료 후 정착 지원 안내소 :
+                                                </div>
+                                                <div class="pi-right">유휴 공간, 지원 정책, 꿀팁 모두모두</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button
+                                class="carousel-control-prev"
+                                type="button"
+                                data-bs-target="#info-carousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button
+                                class="carousel-control-next"
+                                type="button"
+                                data-bs-target="#info-carousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- row end -->
+            </section>
+
+            <section
+                class="section-schedule sections"
+                id="section-schedule"
+                data-anchor="section-schedule">
+                <div class="backgrounds"></div>
+                <div class="container big-title" id="schedule-title">
+                    <h2>2. 한 달 일정 안내</h2>
+                </div>
+                <div class="container schedule-container">
+                    <div class="row text-center schedule-row">
+                        <div class="col-md-12 col-sm-12 schedule-card">
+                            <a role="link" aria-disabled="true">
+                                <div class="schedule-image card-image"><img src="../static/images/digging.JPG" alt="1주차"/></div>
+                                <div class="schedule-caption card-caption">
+                                    <h3 class="schedule-title">1주</h3>
+                                    <p class="schedule-period">09.19 ~ 09.23</p>
+                                    <p class="schedule-desc">우리, 도고 서로를 알아가기</p>
+                                    <p class="schedule-desc-key">디깅주간</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-12 col-sm-12 schedule-card">
+                            <a role="link" aria-disabled="true">
+                                <div class="schedule-image card-image"><img src="../static/images/experience.JPG" alt="2주차"/></div>
+                                <div class="schedule-caption card-caption">
+                                    <h3 class="schedule-title">2주</h3>
+                                    <p class="schedule-period">09.26 ~ 09.30</p>
+                                    <p class="schedule-desc">식물과 함께하는 프로젝트 시작</p>
+                                    <p class="schedule-desc-key">실험주간</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-12 col-sm-12 schedule-card">
+                            <a role="link" aria-disabled="true">
+                                <div class="schedule-image card-image"><img src="../static/images/focus.JPG" alt="3주차"/></div>
+                                <div class="schedule-caption card-caption">
+                                    <h3 class="schedule-title">3주</h3>
+                                    <p class="schedule-period">10.03 ~ 10.07</p>
+                                    <p class="schedule-desc">계속되는 식물수업과 프로젝트</p>
+                                    <p class="schedule-desc-key">집중주간</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-12 col-sm-12 schedule-card">
+                            <a role="link" aria-disabled="true">
+                                <div class="schedule-image card-image"><img src="../static/images/pt.JPG" alt="4주차"/></div>
+                                <div class="schedule-caption card-caption">
+                                    <h3 class="schedule-title">4주</h3>
+                                    <p class="schedule-period">10.10 ~ 10.14</p>
+                                    <p class="schedule-desc">도고에 피어난 프로젝트 발표회</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                class="section-rule sections"
+                id="section-rule"
+                data-anchor="section-rule">
+                <div class="container big-title" id="rule-title">
+                    <h2>3. 생활규칙</h2>
+                </div>
+                <div class="twins-container">
+                    <div class="container">
+                        <div class="row twins-row">
+                            <div class="twins-left col-lg-6">
+                                <div class="twins-titles">
+                                    <h4>
+                                        <strong>우리는 함께 생활합니다</strong>
+                                    </h4>
+                                </div>
+                                <ol class="twins-contents">
+                                    <li class="twins-items">
+                                        <p>서로
+                                            <strong>존댓말을 사용</strong>하며, ‘~님’ 호칭으로 부릅니다.
+                                        </br>특히 나이를 묻거나 따지지 않습니다. 우리는 이곳에 ‘청년’으로 모였으니까요!</p>
+                                    </li>
+                                    <li class="twins-items">
+                                        <p>지나친
+                                            <strong>음주 강요/범법 행위/혐오표현 사용/무단 불참 등에는 패널티</strong>가 부과됩니다.</p>
+                                    </li>
+                                    <li class="twins-items">
+                                        <p>불가피한 사정으로 참여가 어려울 경우에는 길잡이(STAFF)에게
+                                            <strong>미리</strong>
+                                            알려주세요.</p>
+                                    </li>
+                                    <li class="twins-items">
+                                        <p>도고는 길이 좁습니다.
+                                            <strong>교통 안전</strong>을 꼭 지켜주세요.</p>
+                                    </li>
+                                    <li class="twins-items">
+                                        <p>숙소에서
+                                            <strong>혼숙은 절대 금지</strong>입니다.
+                                            <strong>흡연은 지정된 곳에서만 가능</strong>합니다.</p>
+                                    </li>
+                                    <li class="twins-items">
+                                        <p>서로 존중하는 한 달이 되도록, 우리 모두
+                                            <strong>기본 예의범절</strong>을 지킵시다</p>
+                                    </li>
+                                    <li class="twins-items">
+                                        <p>공용 물건 또는 시설은 소중하게
+                                            <strong>사용 후 뒷정리</strong>를 해주세요.</p>
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="twins-right col-lg-6">
+                                <div class="twins-titles">
+                                    <h4>
+                                        <strong>우리는 제로-웨이스트를 지향합니다</strong>
+                                    </h4>
+                                </div>
+                                <ol class="twins-contents">
+                                    <li class="twins-items">
+                                        <p>한 달 동안 ‘일회용품’을 가능한 사용하지 않습니다.
+                                        </br>
+                                        → 텀블러, 다회용 빨대나 식기(필요 시)를 꼭 지참해주세요.</p>
+                                    </li>
+                                    <li class="twins-items">
+                                        <p>식당에서도 일회용 물티슈를 사용하지 않습니다.
+                                        </br>
+                                        → 손을 깨끗이 씻고 탁탁 가볍게 털어주세요</p>
+                                    </li>
+                                    <li class="twins-items">
+                                        <p>가까운 거리는 걸어다니거나 공유 자전거를 이용합니다.</p>
+                                    </li>
+                                    <li class="twins-items">
+                                        <p>다회용 장바구니, 카트가 준비되어 있으니 비닐봉투 대신 사용하세요!</p>
+                                    </li>
+                                    <li class="twins-items">
+                                        <p>환경 분야의 다양한 책들이 준비되어 있으니 편하게 문의해주세요.</p>
+                                    </li>
+                                    <li class="twins-items">
+                                        <p>우리는 ‘이면지 일기’를 씁니다.</p>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                class="materials sections"
+                id="section-materials"
+                data-anchor="section-materials">
+                <div class="container big-title" id="matrials-title">
+                    <h2>4. 준비물</h2>
+                </div>
+                <div class="twins-container materials-container">
+                    <div class="container">
+                        <div class="row twins-row materials-row">
+                            <div class="twins-left col-lg-6 materials-already">
+                                <div class="twins-titles">
+                                    <h4>도고에 준비되는 것</h4>
+                                </div>
+                                <ul class="twins-contents">
+                                    <li class="twins-items">
+                                        <p>필기도구, 비상약, 명찰</p>
+                                    </li>
+                                    <li class="twins-items">
+                                        <p>책과 보드게임</p>
+                                    </li>
+                                    <li class="twins-items">
+                                        <p>공유자전거</p>
+                                    </li>
+                                    <li class="twins-items">
+                                        <p>숙소 제공 수건</p>
+                                    </li>
+                                </ul>
+                                <div class="material-icons">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <i class="bi bi-capsule"></i>
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="bi bi-book"></i>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <i class="bi bi-bicycle"></i>
+                                        </div>
+                                        <div class="col-6 etc">
+                                            <span>etc.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="twins-right col-lg-6">
+                                <div class="twins-titles">
+                                    <h4>권장하는 준비물</h4>
+                                </div>
+                                <ul class="twins-contents">
+                                    <li class="twins-items">
+                                        <p>갈아입을 옷, 속옷, 양말, 세면도구, 개인용 목욕용품, 세탁망</p>
+                                    </li>
+                                    <li class="twins-items">
+                                        <p>개인용 수건(필요 시)과 드라이기(숙소에 비치된 것은 바람이 약합니다.)</p>
+                                    </li>
+                                    <li class="twins-items">
+                                        <p>개인 장비(충전기, 노트북, 카메라, 고데기 등)</p>
+                                    </li>
+                                    <li class="twins-items">
+                                        <p>텀블러, 다회용 식기, 손수건 등</p>
+                                    </li>
+                                </ul>
+                                <div class="material-icons icons-right">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <i class="bi bi-laptop"></i>
+                                        </div>
+                                        <div class="col-3">
+                                            <i class="bi bi-camera"></i>
+                                        </div>
+                                        <div class="col-3">
+                                            <i class="bi bi-cup-straw"></i>
+                                        </div>
+                                        <div class="col-3 etc">
+                                            <span>etc.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- <footer th:replace="layout/footer :: footer"></footer> -->
+        <footer class="footer bg-dark text-light" th:fragment="footer" id="footer">
+            <div class="container">
+                <div class="row align-items-center" id="footer-contents">
+                    <div class="col-md-3">
+                        <p class="copyright
+                    text-light">&copy; &nbsp;ONUS, All Rights Reserved</p>
+                    </div>
+                    <div class="col-md-6 text-center footer-info">
+                        주소:
+                    </div>
+                    <div class="col-md-2
+                    text-center footer-info">
+                        TEL: 010-0000-0000
+                    </div>
+                    <div class="col-md-1">
+                        <div class="footer-social-links">
+                            <a href="https://www.instagram.com/dog0on1000/" target="_blank">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a
+                                href="https://www.youtube.com/c/%EB%8F%84%EA%B3%A0ONAIR/featured"
+                                target="_blank">
+                                <i class="bi bi-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scroll UP -->
+        <div class="scroll-up">
+        <a href="">
+            <i class="bi bi-chevron-double-up"></i>
+        </a>
+        </div>
+
+        <script src="../static/js/common.js" type="text/javascript"></script>
+        <script src="../static/js/handal.js"></script>
+
+    </body>
+    
+</html>

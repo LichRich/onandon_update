@@ -1,0 +1,223 @@
+/***************************************************************
+ *                                                             *
+ *                              common                         *
+ *                                                             *
+ ***************************************************************/
+
+:root {
+    --navbar-height: 50px;
+    --sangsa-pt: 30px;
+}
+
+.sections {
+    padding-top: var(--navbar-height);
+    position: relative;
+}
+
+.emphasize {
+    font-weight: bold;
+}
+
+/***************************************************************
+ *                                                             *
+ *                          intro section                      *
+ *                                                             *
+ ***************************************************************/
+.section-intro {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+}
+
+/**************** background components **************/
+.intro-back-carousel {
+    padding-top: var(--navbar-height);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.intro-back-inner {
+    width: 100%;
+    height: 100%;
+}
+
+.row-back-inner {
+    justify-content: center;
+    height: 100%;
+}
+
+.c-item-custom {
+    padding: 0 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-imgs {
+    width: 100%;
+    height: 100%;
+}
+
+.intro-back-inner .active.carousel-item-end,
+.intro-back-inner .carousel-item-next:not(.carousel-item-start) {
+    transform: translateY(-100%);
+}
+.intro-back-inner .active.carousel-item-start,
+.intro-back-inner .carousel-item-prev:not(.carousel-item-end) {
+    transform: translateY(100%);
+}
+
+/***************************************************************
+ *                                                             *
+ *                          sangsa section                     *
+ *                                                             *
+ ***************************************************************/
+.sangsa-container {
+    z-index: 100;
+    color: white;
+    height: 100%;
+}
+
+.container-contents {
+    height: 100%;
+    align-items: center;
+}
+
+.sangsa-left {
+    padding: 0;
+    text-align: center;
+}
+
+.imgs {
+    height: 600px;
+}
+
+.imgs > img {
+    height: 100%;
+}
+
+.sangsa-right {
+    position: relative;
+    display: flex;
+    height: 100%;
+}
+
+.sangsa-title {
+    position: absolute;
+    width: 100%;
+    top: var(--navbar-height);
+    padding-top: var(--sangsa-pt);
+    text-align: center;
+}
+
+.sangsa-title > h2 {
+    text-align: center;
+}
+
+.container-desc {
+    padding-top: var(--sangsa-pt);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sangsa-desc {
+    width: fit-content;
+    margin: auto;
+    font-size: 18px;
+}
+
+.sangsa-desc .emphasize {
+    font-size: 21px;
+}
+
+.backgrounds::after {
+    position: absolute;
+    content: ' ';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 17, 17, 0.6);
+}
+
+#sangsa-background {
+    width: 100%;
+}
+
+/***************************************************************
+ *                                                             *
+ *                          salon section                      *
+ *                                                             *
+ ***************************************************************/
+.section-salon {
+    text-align: center;
+}
+
+.salon-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.salon-title {
+    padding-top: 50px;
+}
+
+.salon-desc {
+    padding-bottom: 80px;
+    font-size: 21px;
+}
+
+.salon-desc .emphasize {
+    font-size: 25px;
+}
+
+#img-salon {
+    width: 100%;
+}
+
+/***************************************************************
+ *                                                             *
+ *                       according to width                    *
+ *                                                             *
+ ***************************************************************/
+@media(max-width: 576px) {
+    .main-onus-contents {
+        width: 100%;
+    }
+}
+
+@media(min-width: 576px) {
+    .main-onus-contents {
+        width: 540px;
+    }
+}
+
+@media(min-width: 768px) {
+    .main-onus-contents {
+        width: 720px;
+    }
+}
+
+@media(min-width: 992px) {
+    .main-onus-contents {
+        width: 960px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .main-onus-contents {
+        width: 1140px;
+    }
+}
+
+@media(min-width: 1400px) {
+    .main-onus-contents {
+        width: 1320px;
+    }
+}

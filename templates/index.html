@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- <head th:replace="layout/header :: head ('도고청년마을')"><link rel="stylesheet"
+    href="../static/css/index.css"></head> -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+            crossorigin="anonymous">
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="../static/css/common.css">
+        <link rel="stylesheet" href="../static/css/index.css">
+        <!-- scripts -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+        <script
+            src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+            integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+            integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+            crossorigin="anonymous"
+            async="async"></script>
+        <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
+        <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
+
+        <title>도고청년마을</title>
+    </head>
+    <body>
+
+        <header
+            th:fragment="header"
+            class="navbar navbar-custom navbar-expand-lg fixed-top"
+            id="top-navbar">
+            <div class="container">
+                <a href="" class="navbar-brand" tabindex="-1">
+                    <img src="../static/images/dogoon1000_logo-removebg.png" alt="logo" id="logo">
+                    도고온천마을
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navmenu"
+                    aria-controls="navmenu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navmenu">
+                    <ul class="navbar-nav ms-auto text-light">
+                        <li class="nav-item">
+                            <a href="" class="nav-link" tabindex="-1">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="village_plan.html" class="nav-link" tabindex="-1">마을 계획</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="handal.html" class="nav-link" tabindex="-1">한달살이 안내</a>
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSc7II0zqi03oeYp9HzsGx6WTRrRX1uT4Xt459SVJMlgx-yMqw/viewform"
+                                class="nav-link"
+                                target="_blank"
+                                tabindex="-1">한달살이 신청하기</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link to-archive" tabindex="-1">ARCHIVE</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <main id="container">
+
+            <!-- intro section -->
+            <section
+                class="section-intro sections"
+                data-anchor="section-intro"
+                tabindex="-1">
+                <div class="container container-intro">
+                    <div class="backgrounds" id="intro-background"></div>
+                    <div class="intro-contents">
+                        <div class="intro-desc-box">
+                            <p class="intro-desc">아산시 청년마을</p>
+                        </div>
+                        <div class="intro-logo">
+                            <img src="../static/images/dogoon1000_logo-removebg.png" alt="도고온천로고">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- slogun Section -->
+            <section
+                class="section-slogun sections"
+                data-anchor="section-slogun"
+                tabindex="-1">
+                <div class="container slogun-container">
+                    <div
+                        id="main-background-carousel"
+                        class="backgrounds carousel slide"
+                        data-bs-ride="carousel"
+                        data-bs-interval="5000">
+                        <div class="carousel-inner background-inner">
+                            <div class="carousel-item active">
+                                <img src="../static/images/background0_cut.jpeg" alt="배경이미지 carousel" id="bimg1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../static/images/background3_cut.png" alt="배경이미지 carousel" id="bimg2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../static/images/img_carousel0_cut.png" alt="배경이미지 carousel" id="bimg3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../static/images/background2_cut.png" alt="배경이미지 carousel" id="bimg4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container slogun-contents">
+                        <div class="slogun-desc-box">
+                            <div class="main-slogun-desc">
+                                <p>충남 아산시
+                                    <strong>도고면</strong>에 위치한 우리 마을은</p>
+                                <div class="strong">
+                                    <p>1. 따뜻한 사람들이 모여사는 온천마을</p>
+                                    <p>2. 식물, 동물 그리고 사람이 행복한 마을</p>
+                                </div>
+                                <p>두 가지 슬로건으로 함께 청년마을을 만들어 가고 있습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Character Section -->
+            <section class="section-character sections" data-anchor="section-character">
+                <div class="backgrounds" id="character-background"></div>
+                <div class="container character-container">
+                    <div class="main-character-img">
+                        <img src="../static/images/dodudge-removebg.png" alt="도더지">
+                    </div>
+                    <div class="main-character-desc">
+                        <h2 class="strong">도고 + 두더지 = 도더지</h2>
+                        <div>
+                            <p>나는야 도고의 숨겨진 로컬 자원을 파헤치는 도더지! 서로를 연결하기 위한 땅굴을 파요.</p>
+                            <p>실험과 모험을 좋아하며 발명가를 꿈꾸고, 청년마을을 가꾸는 가드너랍니다.</p>
+                            <p>밤에는 도고살롱의 바텐더로 변신해요.</p>
+                            <p>온천하는 두더지, 본 적 있나요?</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Onus Section -->
+            <section class="container section-onus sections" data-anchor="section-onus">
+                <div class="backgrounds background-bottom"></div>
+                <div class="main-onus-contents">
+                    <div class="onus-contents-top">
+                        <div class="main-onus-img">
+                            <img src="../static/images/onus_logo.png" alt="온어스로고">
+                        </div>
+                        <div class="onus-contents-top-right">
+                            <p>
+                                <span class="emphasize">사회적협동조합 온어스</span>는
+                            </p>
+                            <p>문화기획·디자인·인테리어·환경교육·사진·영상·공연·축제 등</p>
+                            <p>
+                                <span class="emphasize">다양한 업종의 청년 기업들이 모여 만든 사회적협동조합</span>입니다.</p>
+                        </div>
+                    </div>
+                    <div class="main-onus-desc">
+                        <p>
+                            <strong>우리는 일하고, 퇴근 후 함께 밥을 먹고, 고민을 나누는 과정에서 이렇게 생각했습니다.</strong>
+                        </p>
+                        <div class="emphasize">
+                            <div class="quotes">
+                                <i class="bi bi-quote"></i>
+                                <p>우리가 마을이 된다면 어떨까?</p>
+                                <i class="bi bi-quote" id="rotate_quote"></i>
+                            </div>
+                            <p>우리의 재능으로 지역을 변화시킨다면, 공존과 상생으로 살아갈 수 있지 않을까?</p>
+                        </div>
+                        <div class="text-center desc-center-text">
+                            <p>그리고 인구 소멸 위기 지역 도고면을 청년마을로,</p>
+                            <p>무엇이든 시도하고 살아보는 도고를 만들고자 합니다.</p>
+                        </div>
+                        <p class="emphasize">일하고, 쉬고, 놉시다!</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer
+            class="footer bg-dark text-light"
+            th:fragment="footer"
+            id="footer"
+            tabindex="-1">
+            <div class="container">
+                <div class="row align-items-center" id="footer-contents">
+                    <div class="col-md-3">
+                        <p class="copyright text-light">&copy; &nbsp;ONUS, All Rights Reserved</p>
+                    </div>
+                    <div class="col-md-6 text-center footer-info">
+                        주소:
+                    </div>
+                    <div class="col-md-2 text-center footer-info">
+                        TEL: 010-0000-0000
+                    </div>
+                    <div class="col-md-1">
+                        <div class="footer-social-links">
+                            <a href="https://www.instagram.com/dog0on1000/" target="_blank">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a
+                                href="https://www.youtube.com/c/%EB%8F%84%EA%B3%A0ONAIR/featured"
+                                target="_blank">
+                                <i class="bi bi-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scroll UP -->
+        <div class="scroll-up">
+            <a href="" tabindex="-1">
+                <i class="bi bi-chevron-double-up"></i>
+            </a>
+        </div>
+
+        <script src="../static/js/common.js" type="text/javascript"></script>
+        <script src="../static/js/index.js" type="text/javascript"></script>
+
+    </body>
+</html>
