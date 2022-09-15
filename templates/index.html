@@ -42,13 +42,22 @@
 
         <title>도고청년마을</title>
     </head>
-    <body>
+    <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+
+        <section class="loading">
+            <div class="loading-components">
+                <h1 class="loading-title">Loading...</h1>
+                <div class="progress-bar" aria-hidden="true">
+                    <span class="progress-bar-gauge"></span>
+                </div>
+            </div>
+        </section>
 
         <header
             th:fragment="header"
             class="navbar navbar-custom navbar-expand-lg fixed-top"
             id="top-navbar">
-            <div class="container">
+            <div class="container-xxl">
                 <a href="" class="navbar-brand" tabindex="-1">
                     <img src="../static/images/dogoon1000_logo-removebg.png" alt="logo" id="logo">
                     도고온천마을
@@ -97,7 +106,7 @@
                 class="section-intro sections"
                 data-anchor="section-intro"
                 tabindex="-1">
-                <div class="container container-intro">
+                <div class="container-xxl container-intro container-temp">
                     <div class="backgrounds" id="intro-background"></div>
                     <div class="intro-contents">
                         <div class="intro-desc-box">
@@ -115,28 +124,28 @@
                 class="section-slogun sections"
                 data-anchor="section-slogun"
                 tabindex="-1">
-                <div class="container slogun-container">
+                <div class="container-xxl slogun-container container-temp">
                     <div
                         id="main-background-carousel"
                         class="backgrounds carousel slide"
                         data-bs-ride="carousel"
                         data-bs-interval="5000">
-                        <div class="carousel-inner background-inner">
-                            <div class="carousel-item active">
+                        <div class="carousel-inner slogun-carousel-inner background-inner">
+                            <div class="carousel-item slogun-carousel-item active">
                                 <img src="../static/images/background0_cut.jpeg" alt="배경이미지 carousel" id="bimg1">
                             </div>
-                            <div class="carousel-item">
+                            <div class="carousel-item slogun-carousel-item">
                                 <img src="../static/images/background3_cut.png" alt="배경이미지 carousel" id="bimg2">
                             </div>
-                            <div class="carousel-item">
+                            <div class="carousel-item slogun-carousel-item">
                                 <img src="../static/images/img_carousel0_cut.png" alt="배경이미지 carousel" id="bimg3">
                             </div>
-                            <div class="carousel-item">
+                            <div class="carousel-item slogun-carousel-item">
                                 <img src="../static/images/background2_cut.png" alt="배경이미지 carousel" id="bimg4">
                             </div>
                         </div>
                     </div>
-                    <div class="container slogun-contents">
+                    <div class="container-xxl slogun-contents">
                         <div class="slogun-desc-box">
                             <div class="main-slogun-desc">
                                 <p>충남 아산시
@@ -155,7 +164,7 @@
             <!-- Character Section -->
             <section class="section-character sections" data-anchor="section-character">
                 <div class="backgrounds" id="character-background"></div>
-                <div class="container character-container">
+                <div class="container-xxl character-container container-temp">
                     <div class="main-character-img">
                         <img src="../static/images/dodudge-removebg.png" alt="도더지">
                     </div>
@@ -172,7 +181,7 @@
             </section>
 
             <!-- Onus Section -->
-            <section class="container section-onus sections" data-anchor="section-onus">
+            <section class="container-xxl section-onus sections container-temp" data-anchor="section-onus">
                 <div class="backgrounds background-bottom"></div>
                 <div class="main-onus-contents">
                     <div class="onus-contents-top">
@@ -217,7 +226,7 @@
             th:fragment="footer"
             id="footer"
             tabindex="-1">
-            <div class="container">
+            <div class="container-xxl">
                 <div class="row align-items-center" id="footer-contents">
                     <div class="col-md-3">
                         <p class="copyright text-light">&copy; &nbsp;ONUS, All Rights Reserved</p>

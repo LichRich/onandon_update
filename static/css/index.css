@@ -1,5 +1,8 @@
-/* common */
-
+/***************************************************************
+ *                                                             *
+ *                         Common features                     *
+ *                                                             *
+ ***************************************************************/
 :root {
     --navbar-height: 50px;
     --strong-size: 28px;
@@ -16,7 +19,11 @@
     padding-top: var(--navbar-height);
 }
 
-/* backgrounds */
+/***************************************************************
+ *                                                             *
+ *                           Backgrounds                       *
+ *                                                             *
+ ***************************************************************/
 .backgrounds > .carousel-inner {
     width: 100%;
     height: 100%;
@@ -38,7 +45,11 @@
     background-color: #fff;
 }
 
-/* section-intro */
+/***************************************************************
+ *                                                             *
+ *                          intro section                     *
+ *                                                             *
+ ***************************************************************/
 .container-intro {
     height: 100%;
     text-align: center;
@@ -67,7 +78,11 @@
     align-items: flex-start;
 }
 
-/* section-slogun */
+/***************************************************************
+ *                                                             *
+ *                          Slogun section                     *
+ *                                                             *
+ ***************************************************************/
 .section-slogun {
     position: relative;
     text-align: center;
@@ -102,10 +117,12 @@
 
 .slogun-carousel-inner {
     width: 100%;
+    height: 100%;
 }
 
 .slogun-carousel-item > img {
     width: 100%;
+    height: 100%;
 }
 
 .main-slogun-desc {
@@ -124,7 +141,11 @@
     height: 100%;
 }
 
-/* section-character */
+/***************************************************************
+ *                                                             *
+ *                       Character section                     *
+ *                                                             *
+ ***************************************************************/
 .section-character {
     background-color: #000;
     z-index: -9;
@@ -157,7 +178,11 @@
     background-color: rgba(74,141,103, 0.7);
 }
 
-/* section-onus */
+/***************************************************************
+ *                                                             *
+ *                          OnUs section                       *
+ *                                                             *
+ ***************************************************************/
 .section-onus {
     position: relative;
     max-width: 100%;
@@ -237,7 +262,11 @@
     padding-top: 15px;
 }
 
-/* according to width */
+/***************************************************************
+ *                                                             *
+ *                      According to Width                     *
+ *                                                             *
+ ***************************************************************/
 @media(max-width: 576px) {
     .main-onus-contents {
         width: 100%;
@@ -268,6 +297,21 @@
         height: 100%;
         width: auto;
     } */
+    header > .container-xxl {
+        padding: 0;
+    }
+
+    .navbar-brand {
+        margin-left: 15px;
+    }
+
+    .navbar-toggler {
+        margin-right: 15px;
+    }
+
+    #navmenu .nav-item {
+        text-align: center;
+    }
     
     .main-onus-contents {
         width: 960px;

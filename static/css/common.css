@@ -1,4 +1,9 @@
 /* common features */
+/***************************************************************
+ *                                                             *
+ *                          common features                    *
+ *                                                             *
+ ***************************************************************/
 /* * {
     font-family: gmarket-sans;
 } */
@@ -87,7 +92,93 @@ a:hover {
     margin-right: 2rem;
 }
 
-/* Header */
+/***************************************************************
+ *                                                             *
+ *                             Loading                         *
+ *                                                             *
+ ***************************************************************/
+ .loading {
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    background:#fff;
+    z-index:1000;
+}
+
+.loading-components {
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.loading-title {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.3333333333;
+    color: #151B26;
+    text-align: center;
+    animation-name: flicker;
+    animation-duration: 1600ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    margin-bottom: 20px;
+}
+
+.progress-bar{
+    width: 300px;
+    height: 12px;
+    background-color: #e5eaef;
+    border-radius: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar-gauge{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 12px;
+    border-radius: 100px;
+    background-color: #13CE66;
+    animation-name: loading-bar;
+    animation-duration: 1600ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+@keyframes flicker {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes loading-bar {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    90% {
+        width: 100%;
+        opacity: 1;
+    }
+    100% {
+        width: 100%;
+        opacity: 0;
+    }
+}
+
+/***************************************************************
+ *                                                             *
+ *                          Header section                     *
+ *                                                             *
+ ***************************************************************/
 .navbar-custom {
     height: var(--navbar-height);
     background-color: #fff;
@@ -99,10 +190,15 @@ a:hover {
     line-height: 50px;
 }
 
-/* Footer */
+/***************************************************************
+ *                                                             *
+ *                          Footer section                     *
+ *                                                             *
+ ***************************************************************/
 .footer {
     position: absolute;
     width: 100%;
+    height: 44px;
     bottom: -44px;
 }
 
@@ -130,29 +226,23 @@ a:hover {
     line-height: 17px;
 }
 
-@media(max-width: 800px) {
-    .copyright {
-        font-size: small;
-    }
 
-    .footer-info {
-        font-size: small;
-    }
-
-    #footer-contents {
-        display: flex;
-        flex-direction: column;
-    }
-    
-}
-
-/* intro */
+/***************************************************************
+ *                                                             *
+ *                          intro section                      *
+ *                                                             *
+ ***************************************************************/
 .intro-contents {
     padding-top: 50px;
     opacity: 0;
 }
 
-/* Scroll to top */
+
+/***************************************************************
+ *                                                             *
+ *                          Scoll To Top                       *
+ *                                                             *
+ ***************************************************************/
 .scroll-up {
     position: fixed;
     display: none;
@@ -197,7 +287,14 @@ a:hover {
     src: url(assets/fonts/GmarketSansOTF/GmarketSansLight.otf);
 } */
 
-/* according to width */
+/***************************************************************
+ *                                                             *
+ *                      According to width                     *
+ *                                                             *
+ ***************************************************************/
+.container-temp {
+    /* width: 540px; */
+}
 @media(max-width: 576px) {
     .main-onus-contents {
         width: 100%;
@@ -227,6 +324,19 @@ a:hover {
 
     .nav-link::after {
         content: none;
+    }
+
+    .copyright {
+        font-size: small;
+    }
+
+    .footer-info {
+        font-size: small;
+    }
+
+    #footer-contents {
+        display: flex;
+        flex-direction: column;
     }
     
 }

@@ -42,7 +42,16 @@
 
         <title th:text="${title}">도고청년마을</title>
     </head>
-    <body>
+    <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+
+        <section class="loading">
+            <div class="loading-components">
+                <h1 class="loading-title">Loading...</h1>
+                <div class="progress-bar" aria-hidden="true">
+                    <span class="progress-bar-gauge"></span>
+                </div>
+            </div>
+        </section>
 
         <!-- <header th:replace="layout/header :: header"></header> -->
         <header
@@ -109,7 +118,7 @@
                 class="section-intro sections"
                 id="section-intro"
                 data-anchor="section-intro">
-                <div class="container handal-title intro-contents">
+                <div class="container handal-title intro-contents container-temp">
                     <h2>도고 한 달 살이 안내서</h2>
                 </div>
                 <div class="backgrounds">
@@ -287,7 +296,7 @@
                 <div class="container big-title" id="schedule-title">
                     <h2>2. 한 달 일정 안내</h2>
                 </div>
-                <div class="container schedule-container">
+                <div class="container schedule-container container-temp">
                     <div class="row text-center schedule-row">
                         <div class="col-md-12 col-sm-12 schedule-card">
                             <a role="link" aria-disabled="true">

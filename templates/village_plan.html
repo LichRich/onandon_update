@@ -43,7 +43,17 @@
         <title th:text="${title}">마을계획</title>
     </head>
 
-    <body>
+    <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+
+        <section class="loading">
+            <div class="loading-components">
+                <h1 class="loading-title">Loading...</h1>
+                <div class="progress-bar" aria-hidden="true">
+                    <span class="progress-bar-gauge"></span>
+                </div>
+            </div>
+        </section>
+
         <!-- <header th:replace="layout/header :: header"></header> -->
         <!-- top navbar -->
         <header
@@ -129,6 +139,7 @@
                     </div>
                 </div>
             </section>
+            
             <section
                 class="sections section-sangsa"
                 id="section-sangsa"

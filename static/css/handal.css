@@ -148,7 +148,11 @@
     padding: 5px;
 }
 
-/* section schedule */
+/***************************************************************
+ *                                                             *
+ *                        Schedule section                     *
+ *                                                             *
+ ***************************************************************/
 #section-schedule {
     color: #fff;
 }
@@ -238,10 +242,9 @@
     width: 100%;
     height: 100%;
     align-items: center;
-    padding-top: 50%;
+    padding-top: 53%;
     opacity: 0;
     position: absolute;
-    bottom: 50%;
     left: 0;
     text-align: center;
     overflow: hidden;
@@ -269,7 +272,11 @@
     font-weight: bold;
 }
 
-/* section rule & materials */
+/***************************************************************
+ *                                                             *
+ *                  Rule & Materials section                   *
+ *                                                             *
+ ***************************************************************/
 .twins-container {
     position:relative;
     display: flex;
@@ -320,7 +327,11 @@
     margin-bottom: 20px;
 }
 
-/* section materials only */
+/***************************************************************
+ *                                                             *
+ *                  Materials section Only                     *
+ *                                                             *
+ ***************************************************************/
 .materials-row {
     justify-content: space-around;
 }
@@ -342,7 +353,11 @@
     padding-top: 20px;
 }
 
-/* according to width */
+/***************************************************************
+ *                                                             *
+ *                      According to Width                     *
+ *                                                             *
+ ***************************************************************/
 @media(max-width: 576px) {
     .main-onus-contents {
         width: 100%;
