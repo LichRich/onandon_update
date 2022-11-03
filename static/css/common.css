@@ -1,12 +1,11 @@
-/* common features */
 /***************************************************************
  *                                                             *
  *                          common features                    *
  *                                                             *
  ***************************************************************/
-/* * {
-    font-family: gmarket-sans;
-} */
+* {
+    font-family: surround-air;
+}
 
 :root {
     --navbar-height: 50px;
@@ -38,9 +37,16 @@ body::before {
     background-color: #111 !important;
 }
 
+/***************************************************************
+ *                                                             *
+ *                            header                           *
+ *                                                             *
+ ***************************************************************/
+
 #logo {
     width: auto;
     height: var(--navbar-height);
+    padding: 10px 0;
 }
 
 .navbar-nav .nav-item .nav-link {
@@ -56,6 +62,10 @@ body::before {
 
 .nav-item:last-child .nav-link::after {
     content: none;
+}
+
+.header-nav-items {
+    font-size: 20px;
 }
 
 a:focus,
@@ -272,20 +282,18 @@ a:hover {
 }
 
 /* font-css */
-/* @font-face {
-    font-family: gmarket-sans;
-    src: url(assets/fonts/GmarketSansOTF/GmarketSansMedium.otf);
-}
-
 @font-face {
-    font-family: gmarket-sans-bold;
-    src: url(assets/fonts/GmarketSansOTF/GmarketSansBold.otf);
+    font-family: classic-type;
+    src: url(../fonts/cafe24_Classic/Cafe24Classictype.ttf);
 }
-
 @font-face {
-    font-family: gmarket-sans-light;
-    src: url(assets/fonts/GmarketSansOTF/GmarketSansLight.otf);
-} */
+    font-family: danjung;
+    src: url(../fonts/cafe24_Danjung/Cafe24Danjunghae.ttf);
+}
+@font-face {
+    font-family: surround-air;
+    src: url(../fonts/cafe24_surroundAir/Cafe24SsurroundAir.ttf);
+}
 
 /***************************************************************
  *                                                             *
