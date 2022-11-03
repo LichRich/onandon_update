@@ -42,7 +42,10 @@
 
         <title>도고청년마을</title>
     </head>
-    <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+    <body
+        oncontextmenu="return false"
+        onselectstart="return false"
+        ondragstart="return false">
 
         <section class="loading">
             <div class="loading-components">
@@ -55,11 +58,11 @@
 
         <header
             th:fragment="header"
-            class="navbar navbar-custom navbar-expand-lg fixed-top"
+            class="navbar navbar-dark navbar-custom navbar-expand-lg fixed-top"
             id="top-navbar">
             <div class="container-xxl">
                 <a href="" class="navbar-brand" tabindex="-1">
-                    <img src="../static/images/dogoon1000_logo-removebg.png" alt="logo" id="logo">
+                    <img src="../static/images/dogoon1000_logo.png" alt="logo" id="logo">
                 </a>
                 <button
                     class="navbar-toggler"
@@ -101,15 +104,36 @@
                 class="section-intro sections"
                 data-anchor="section-intro"
                 tabindex="-1">
-                <div class="container-xxl container-intro container-temp">
+                <div class="container-xxl container-intro">
                     <div class="backgrounds" id="intro-background">
-                        <!-- carousel 들어가야함 -->
+                        <div
+                            id="intro-back-carousel"
+                            class="carousel carousel-fade slide"
+                            data-bs-ride="carousel">
+                            <div class="carousel-inner intro-back-inner">
+                                <div class="carousel-item i-b-c-item-custom active" data-bs-interval="2000">
+                                    <div class="intro-back-img">
+                                        <img src="../static/images/intro_bg0.jpg" alt="intro background image">
+                                    </div>
+                                </div>
+                                <div class="carousel-item i-b-c-item-custom" data-bs-interval="2000">
+                                    <div class="intro-back-img">
+                                        <img src="../static/images/intro_bg1.jpg" alt="intro background image">
+                                    </div>
+                                </div>
+                                <div class="carousel-item i-b-c-item-custom" data-bs-interval="2000">
+                                    <div class="intro-back-img">
+                                        <img src="../static/images/intro_bg2.jpg" alt="intro background image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="intro-contents">
+                    <!-- <div class="intro-contents">
                         <div class="intro-logo">
                             <img src="../static/images/dogoon1000_logo-removebg.png" alt="도고온천로고">
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </section>
 
@@ -118,26 +142,14 @@
                 class="section-slogun sections"
                 data-anchor="section-slogun"
                 tabindex="-1">
-                <div class="container-xxl slogun-container container-temp">
-                    <div
-                        id="slogun-background"
-                        class="backgrounds">
-                        <div class="carousel-inner slogun-carousel-inner background-inner">
-                            <div class="carousel-item slogun-carousel-item active">
-                                <img src="../static/images/background0_cut.jpeg" alt="배경이미지 carousel" id="bimg1">
-                            </div>
-                            <div class="carousel-item slogun-carousel-item">
-                                <img src="../static/images/background3_cut.png" alt="배경이미지 carousel" id="bimg2">
-                            </div>
-                            <div class="carousel-item slogun-carousel-item">
-                                <img src="../static/images/img_carousel0_cut.png" alt="배경이미지 carousel" id="bimg3">
-                            </div>
-                            <div class="carousel-item slogun-carousel-item">
-                                <img src="../static/images/background2_cut.png" alt="배경이미지 carousel" id="bimg4">
-                            </div>
+                <div class="container-xxl slogun-container">
+                    <div id="slogun-background" class="backgrounds">
+                        <div class="slogun-back-img">
+                            <img src="../static/images/slogun_bg.jpg" alt="slogun bg" id="slogun-bg">
                         </div>
+
                     </div>
-                    <div class="container-xxl slogun-contents">
+                    <div class="slogun-contents">
                         <div class="slogun-desc-box">
                             <div class="main-slogun-desc">
                                 <p>충남 아산시
@@ -153,10 +165,49 @@
                 </div>
             </section>
 
-            <!-- Character Section -->
-            <section class="section-character sections" data-anchor="section-character">
+            <!-- SNS Section -->
+            <section class="section-sns sections" data-anchor="section-sns">
+                <div class="container-xxl sns-container">
+                    <div id="sns-background" class="backgrounds">
+                        <div class="sns-back-img">
+                            <img src="../static/images/sns_bg.jpg" alt="sns bg" id="sns-bg">
+                        </div>
+                    </div>
+                    <div class="sns-contents">
+                        <div class="row sns-contents-row">
+                            <div class="col-lg-6 sns-dogo">
+                                <div class="sns-dogo-title">
+                                    <p class="sns-title-text">도고온천마을 SNS</p>
+                                </div>
+                                <a href="https://www.instagram.com/dog0on1000" class="sns-symbols" target="_blank">
+                                    <img src="../static/images/dogo_insta.png" alt="도고온천인스타" class="sns-imgs">
+                                </a>
+                                <a
+                                    href="https://www.youtube.com/c/%EB%8F%84%EA%B3%A0ONAIR/featured" class="sns-symbols"
+                                    target="_blank">
+                                    <img src="../static/images/dogo_onair.png" alt="도고온에어" class="sns-imgs">
+                                </a>
+                            </div>
+                            <div class="col-lg-6 sns-onus">
+                                <div class="sns-dogo-title">
+                                    <p class="sns-title-text">온어스 Contact</p>
+                                </div>
+                                <a href="https://www.instagram.com/0nus_on_us" class="sns-symbols" target="_blank">
+                                    <img src="../static/images/onus_insta.png" alt="온어스인스타" class="sns-imgs">
+                                </a>
+                                <div class="sns-symbols">
+                                    <img src="../static/images/onus_logo.png" alt="온어스로고" class="sns-imgs">
+                                    <p class="onus-email">E-mail: onus0128@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- <section class="section-character sections" data-anchor="section-character">
                 <div class="backgrounds" id="character-background"></div>
-                <div class="container-xxl character-container container-temp">
+                <div class="container-xxl character-container">
                     <div class="main-character-img">
                         <img src="../static/images/dodudge-removebg.png" alt="도더지">
                     </div>
@@ -172,8 +223,7 @@
                 </div>
             </section>
 
-            <!-- Onus Section -->
-            <section class="container-xxl section-onus sections container-temp" data-anchor="section-onus">
+            <section class="container-xxl section-onus sections" data-anchor="section-onus">
                 <div class="backgrounds background-bottom"></div>
                 <div class="main-onus-contents">
                     <div class="onus-contents-top">
@@ -208,7 +258,7 @@
                         <p class="emphasize">일하고, 쉬고, 놉시다!</p>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
         </main>
 
@@ -220,18 +270,15 @@
             tabindex="-1">
             <div class="container-xxl">
                 <div class="row align-items-center" id="footer-contents">
-                    <div class="col-md-3">
+                    <div class="col-md-8">
                         <p class="copyright text-light">&copy; &nbsp;ONUS, All Rights Reserved</p>
                     </div>
-                    <div class="col-md-6 text-center footer-info">
-                        주소:
-                    </div>
-                    <div class="col-md-2 text-center footer-info">
-                        TEL: 010-0000-0000
+                    <div class="col-md-3 text-center footer-info">
+                        E-mail: onus0128@gmail.com
                     </div>
                     <div class="col-md-1">
                         <div class="footer-social-links">
-                            <a href="https://www.instagram.com/dog0on1000/" target="_blank">
+                            <a href="https://www.instagram.com/dog0on1000" target="_blank">
                                 <i class="bi bi-instagram"></i>
                             </a>
                             <a

@@ -9,13 +9,18 @@ let pages = new Pageable("#container", {
         touch: true, // enable / disable touch / swipe scrolling
         keydown: true, // enable / disable keyboard navigation
     },
-    anchors: ["section-intro", "section-slogun", "section-character", "section-onus"],
+    anchors: ["section-intro", "section-slogun", "section-sns"],
 });
 var max_index = pages.anchors.length - 1;
 
 $(document).ready(function () {
 
     var prev = now = pages.index;
+
+    $('#intro-background').animate({
+        paddingTop: 0,
+        opacity: 1,
+    }, 400);
 
     if (pages.index > 0) {
         $('.scroll-up').fadeIn();

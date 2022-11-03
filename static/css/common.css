@@ -37,11 +37,27 @@ body::before {
     background-color: #111 !important;
 }
 
+.pg-wrapper {
+    width: 100vw !important;
+    height: 100vh !important;
+}
+
 /***************************************************************
  *                                                             *
  *                            header                           *
  *                                                             *
  ***************************************************************/
+.navbar-custom {
+    height: var(--navbar-height);
+    /* background-color: #fff; */
+    transition: all 0.2s ease;
+}
+
+.navbar-brand {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 50px;
+}
 
 #logo {
     width: auto;
@@ -50,8 +66,9 @@ body::before {
 }
 
 .navbar-nav .nav-item .nav-link {
-    background-color: #fff;
+    /* background-color: #fff; */
     padding: 10px 0;
+    transition: all 0.2s ease;
 }
 
 .nav-link::after {
@@ -68,22 +85,15 @@ body::before {
     font-size: 20px;
 }
 
-a:focus,
-a:hover {
-    text-decoration: none;
-    color: #537dcf;
-    outline: 0;
-}
-
 .nav-link {
-    font-weight: bold;
-    color: #333;
+    font-weight: bolder;
+    color: #fff;
 }
 
 .nav-link:active,
 .nav-link:focus,
 .nav-link:hover {
-    color: #537dcf;
+    color: #537dff;
 }
 
 .backgrounds {
@@ -186,22 +196,6 @@ a:hover {
 
 /***************************************************************
  *                                                             *
- *                          Header section                     *
- *                                                             *
- ***************************************************************/
-.navbar-custom {
-    height: var(--navbar-height);
-    background-color: #fff;
-}
-
-.navbar-brand {
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 50px;
-}
-
-/***************************************************************
- *                                                             *
  *                          Footer section                     *
  *                                                             *
  ***************************************************************/
@@ -300,9 +294,6 @@ a:hover {
  *                      According to width                     *
  *                                                             *
  ***************************************************************/
-.container-temp {
-    /* width: 540px; */
-}
 @media(max-width: 576px) {
     .main-onus-contents {
         width: 100%;
