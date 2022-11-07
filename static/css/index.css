@@ -14,10 +14,6 @@
     font-size: 28px;
 }
 
-a {
-    text-decoration: none;
-}
-
 /***************************************************************
  *                                                             *
  *                           Backgrounds                       *
@@ -202,6 +198,7 @@ a {
 
 .sns-contents-row {
     margin: auto;
+    height: 100%;
 }
 
 .sns-title-text {
@@ -211,7 +208,7 @@ a {
 
 .sns-symbols {
     display: block;
-    margin: 100px;
+    margin: 50px;
 }
 
 .sns-symbols:first-child,
@@ -220,12 +217,12 @@ a {
 }
 
 .sns-imgs {
-    width: 400px;
+    width: 350px;
     transition: all 0.3s ease;
 }
 
 .sns-symbols:hover .sns-imgs {
-    width: 450px;
+    width: 400px;
 }
 
 .onus-email {
@@ -378,17 +375,6 @@ a {
 }
 
 @media(max-width: 992px) {
-    /* #bimg1 {
-        content: url("../images/img_carousel0.png");
-        height: 100%;
-        width: auto;
-    }
-
-    #bimg2 {
-        content: url("../images/img_carousel1.png");
-        height: 100%;
-        width: auto;
-    } */
     header > .container-xxl {
         padding: 0;
     }

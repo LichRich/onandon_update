@@ -38,9 +38,27 @@
 
         <!-- Stylesheets -->
         <link rel="stylesheet" href="../static/css/common.css">
-        <link rel="stylesheet" href="../static/css/village_plan.css">
+        <link rel="stylesheet" href="../static/css/village_intro.css">
 
-        <title th:text="${title}">마을계획</title>
+        <!-- favicons -->
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="../static/favicons/apple-touch-icon.png">
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="../static/favicons/favicon-32x32.png">
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="../static/favicons/favicon-16x16.png">
+        <link rel="icon" type="image/x-icon" href="../static/favicons/favicon.ico">
+        <link rel="manifest" href="../static/favicons/site.webmanifest">
+
+        <title th:text="${title}">도고온천마을소개</title>
     </head>
 
     <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
@@ -58,33 +76,39 @@
         <!-- top navbar -->
         <header
             th:fragment="header"
-            class="navbar navbar-custom navbar-expand-lg fixed-top"
+            class="navbar navbar-dark navbar-custom navbar-expand-lg fixed-top"
             id="top-navbar">
-            <div class="container">
-                <a href="index.html" class="navbar-brand">
-                    <img src="../static/images/dogoon1000_logo-removebg.png" alt="logo" id="logo">
-                    <span>도고온천마을</span>
+            <div class="container-xxl navbar-container">
+                <a href="index.html" class="navbar-brand" tabindex="-1">
+                    <img src="../static/images/dogoon1000_logo.png" alt="logo" id="logo">
                 </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navmenu"
+                    aria-controls="navmenu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                <div id="navmenu">
+                <div class="collapse navbar-collapse" id="navmenu">
                     <ul class="navbar-nav ms-auto text-light">
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link">HOME</a>
+                            <a href="index.html" class="nav-link header-nav-items" tabindex="-1">처음으로</a>
                         </li>
                         <li class="nav-item">
-                            <a href="village_plan.html" class="nav-link">마을 계획</a>
+                            <a href="" class="nav-link header-nav-items" tabindex="-1">DOGO온천 마을 소개</a>
                         </li>
                         <li class="nav-item">
-                            <a href="handal.html" class="nav-link">한달살이 안내</a>
+                            <a href="handal.html" class="nav-link header-nav-items" tabindex="-1">마을살이</a>
                         </li>
                         <li class="nav-item">
-                            <a
-                                href="https://docs.google.com/forms/d/e/1FAIpQLSc7II0zqi03oeYp9HzsGx6WTRrRX1uT4Xt459SVJMlgx-yMqw/viewform"
-                                class="nav-link"
-                                target="_blank">한달살이 신청하기</a>
+                            <a href="" class="nav-link header-nav-items to-archive" tabindex="-1">공지사항</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link to-archive">ARCHIVE</a>
+                            <a href="" class="nav-link header-nav-items to-archive" tabindex="-1">기록</a>
                         </li>
                     </ul>
                 </div>
@@ -106,26 +130,26 @@
                             data-bs-interval="200">
                             <div class="carousel-item c-item-custom active">
                                 <div class="row row-back-inner">
-                                    <div class="box-plants col-lg-3 img-boxes">
+                                    <div class="box-plants col-lg-4 img-boxes">
                                         <img src="../static/images/plant1.JPG" alt="" class="carousel-imgs plants-imgs">
                                     </div>
-                                    <div class="box-animals col-lg-3 img-boxes">
+                                    <div class="box-animals col-lg-4 img-boxes">
                                         <img src="../static/images/animal2.jpg" alt="" class="carousel-imgs animal-imgs">
                                     </div>
-                                    <div class="box-people col-lg-3 img-boxes">
+                                    <div class="box-people col-lg-4 img-boxes">
                                         <img src="../static/images/people1_cut.png" alt="" class="carousel-imgs people-imgs">
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-item c-item-custom">
                                 <div class="row row-back-inner">
-                                    <div class="box-plants col-lg-3 img-boxes">
+                                    <div class="box-plants col-lg-4 img-boxes">
                                         <img src="../static/images/plant2.jpg" alt="" class="carousel-imgs plants-imgs">
                                     </div>
-                                    <div class="box-animals col-lg-3 img-boxes">
+                                    <div class="box-animals col-lg-4 img-boxes">
                                         <img src="../static/images/animal3.jpg" alt="" class="carousel-imgs animal-imgs">
                                     </div>
-                                    <div class="box-people col-lg-3 img-boxes">
+                                    <div class="box-people col-lg-4 img-boxes">
                                         <img src="../static/images/people2.jpg" alt="" class="carousel-imgs people-imgs">
                                     </div>
                                 </div>
@@ -135,7 +159,7 @@
                 </div>
                 <div class="container intro-container">
                     <div class="plan-title intro-contents">
-                        <h2 class="emphasize">"식물, 동물 그리고 사람이 행복한" DOGO 온천 마을</h2>
+                        <h2 class="emphasize">DOGO 온천 마을 소개</h2>
                     </div>
                 </div>
             </section>
@@ -161,13 +185,21 @@
                                         data-bs-target="#sangsa-img-carousel"
                                         data-bs-slide-to="1"
                                         aria-label="Slide 2"></button>
+                                    <button
+                                        type="button"
+                                        data-bs-target="#sangsa-img-carousel"
+                                        data-bs-slide-to="2"
+                                        aria-label="Slide 3"></button>    
                                 </div>
                                 <div class="carousel-inner sangsa-carousel-inner">
-                                    <div class="carousel-item imgs active">
-                                        <img src="../static/images/dogo_sangsa1_cut.png" alt="ㄷㄱㅅㅅ">
+                                    <div class="carousel-item imgs active" data-bs-interval="2000">
+                                        <img src="../static/images/sangsa_front0.jpg" alt="ㄷㄱㅅㅅ1">
                                     </div>
-                                    <div class="carousel-item imgs">
-                                        <img src="../static/images/dogo_sangsa2_cut.png" alt="ㄷㄱㅅㅅ내부">
+                                    <div class="carousel-item imgs" data-bs-interval="2000">
+                                        <img src="../static/images/sangsa_front1.jpg" alt="ㄷㄱㅅㅅ2">
+                                    </div>
+                                    <div class="carousel-item imgs" data-bs-interval="2000">
+                                        <img src="../static/images/sangsa_inner.png" alt="ㄷㄱㅅㅅ내부">
                                     </div>
                                 </div>
                             </div>
@@ -179,20 +211,20 @@
                             <div class="container container-desc">
                                 <div class="sangsa-desc">
                                     <p>
-                                        <span class="emphasize">코워킹스페이스, 함께 일하는 공간 “도고상사”</span></p>
-                                    <p>온어스가 운영하는 코워킹 스페이스로</p>
+                                        <span class="emphasize">함께 일하는 공유 오피스 “도고상사”</span></p>
+                                    <p>온어스가 운영하는 공간으로,</p>
                                     <p>
                                         <span class="emphasize">입주 기업</span>과
-                                        <span class="emphasize">멤버십 회원, 한 달 살이 프로그램 참여자</span>는 자유롭게 이용 가능합니다.</p>
-                                    <p>테이블, 의자, 책상, 프린터, 냉장고 등이 준비되어 있습니다.</p>
+                                        <span class="emphasize">멤버십 회원, 한 달 살이 프로그램 참여자</span>는<br>자유롭게 이용 가능합니다.</p>
+                                    <p>* 테이블, 의자, 책상, 프린터, 냉장고 등이 준비되어 있습니다.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="backgrounds">
+                <div class="backgrounds sangsa-back">
                     <img
-                        src="../static/images/dogo_sangsa0_cut.png"
+                        src="../static/images/sangsa_back.jpg"
                         alt="도고상사배경"
                         id="sangsa-background"
                         class="background-imgs">
@@ -222,23 +254,22 @@
         </main>
 
         <!-- <footer th:replace="layout/footer :: footer"></footer> -->
-        <footer class="footer bg-dark text-light" th:fragment="footer" id="footer">
-            <div class="container">
+        <footer
+            class="footer bg-dark text-light"
+            th:fragment="footer"
+            id="footer"
+            tabindex="-1">
+            <div class="container-xxl">
                 <div class="row align-items-center" id="footer-contents">
-                    <div class="col-md-3">
-                        <p class="copyright
-                    text-light">&copy; &nbsp;ONUS, All Rights Reserved</p>
+                    <div class="col-md-8">
+                        <p class="copyright text-light">&copy; &nbsp;ONUS, All Rights Reserved</p>
                     </div>
-                    <div class="col-md-6 text-center footer-info">
-                        주소:
-                    </div>
-                    <div class="col-md-2
-                    text-center footer-info">
-                        TEL: 010-0000-0000
+                    <div class="col-md-3 text-center footer-info">
+                        E-mail: onus0128@gmail.com
                     </div>
                     <div class="col-md-1">
                         <div class="footer-social-links">
-                            <a href="https://www.instagram.com/dog0on1000/" target="_blank">
+                            <a href="https://www.instagram.com/dog0on1000" target="_blank">
                                 <i class="bi bi-instagram"></i>
                             </a>
                             <a

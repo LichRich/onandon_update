@@ -8,7 +8,7 @@
 }
 
 :root {
-    --navbar-height: 50px;
+    --navbar-height: 90px;
 }
 
 html, body {
@@ -17,11 +17,16 @@ html, body {
     -ms-overflow-style: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 .sections {
     width: 100vw;
     height: 100vh;
     position: relative;
     overflow-y: hidden;
+    padding: var(--navbar-height) 0 var(--navbar-height) 0;
 }
 
 ::-webkit-scrollbar {
@@ -49,7 +54,6 @@ body::before {
  ***************************************************************/
 .navbar-custom {
     height: var(--navbar-height);
-    /* background-color: #fff; */
     transition: all 0.2s ease;
 }
 
@@ -340,14 +344,14 @@ body::before {
     
 }
 
-@media(max-width: 1200px) {
-    .main-onus-contents {
-        width: 1140px;
+@media(min-width: 1200px) {
+    .navbar-container {
+        max-width: 960px;
     }
 }
 
 @media(min-width: 1400px) {
-    .main-onus-contents {
-        width: 1320px;
+    .navbar-container {
+        max-width: 960px;
     }
 }

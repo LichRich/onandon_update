@@ -40,6 +40,24 @@
         <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
         <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
 
+        <!-- favicons -->
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="../static/favicons/apple-touch-icon.png">
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="../static/favicons/favicon-32x32.png">
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="../static/favicons/favicon-16x16.png">
+        <link rel="icon" type="image/x-icon" href="../static/favicons/favicon.ico">
+        <link rel="manifest" href="../static/favicons/site.webmanifest">
+
         <title>도고청년마을</title>
     </head>
     <body
@@ -60,7 +78,7 @@
             th:fragment="header"
             class="navbar navbar-dark navbar-custom navbar-expand-lg fixed-top"
             id="top-navbar">
-            <div class="container-xxl">
+            <div class="container-xxl navbar-container">
                 <a href="" class="navbar-brand" tabindex="-1">
                     <img src="../static/images/dogoon1000_logo.png" alt="logo" id="logo">
                 </a>
@@ -81,7 +99,7 @@
                             <a href="" class="nav-link header-nav-items" tabindex="-1">처음으로</a>
                         </li>
                         <li class="nav-item">
-                            <a href="village_plan.html" class="nav-link header-nav-items" tabindex="-1">DOGO온천 마을 소개</a>
+                            <a href="village_intro.html" class="nav-link header-nav-items" tabindex="-1">DOGO온천 마을 소개</a>
                         </li>
                         <li class="nav-item">
                             <a href="handal.html" class="nav-link header-nav-items" tabindex="-1">마을살이</a>
@@ -129,11 +147,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="intro-contents">
-                        <div class="intro-logo">
-                            <img src="../static/images/dogoon1000_logo-removebg.png" alt="도고온천로고">
-                        </div>
-                    </div> -->
+                    <!-- <div class="intro-contents"> <div class="intro-logo"> <img
+                    src="../static/images/dogoon1000_logo-removebg.png" alt="도고온천로고"> </div> </div>
+                    -->
                 </div>
             </section>
 
@@ -179,11 +195,15 @@
                                 <div class="sns-dogo-title">
                                     <p class="sns-title-text">도고온천마을 SNS</p>
                                 </div>
-                                <a href="https://www.instagram.com/dog0on1000" class="sns-symbols" target="_blank">
+                                <a
+                                    href="https://www.instagram.com/dog0on1000"
+                                    class="sns-symbols"
+                                    target="_blank">
                                     <img src="../static/images/dogo_insta.png" alt="도고온천인스타" class="sns-imgs">
                                 </a>
                                 <a
-                                    href="https://www.youtube.com/c/%EB%8F%84%EA%B3%A0ONAIR/featured" class="sns-symbols"
+                                    href="https://www.youtube.com/c/%EB%8F%84%EA%B3%A0ONAIR/featured"
+                                    class="sns-symbols"
                                     target="_blank">
                                     <img src="../static/images/dogo_onair.png" alt="도고온에어" class="sns-imgs">
                                 </a>
@@ -192,7 +212,10 @@
                                 <div class="sns-dogo-title">
                                     <p class="sns-title-text">온어스 Contact</p>
                                 </div>
-                                <a href="https://www.instagram.com/0nus_on_us" class="sns-symbols" target="_blank">
+                                <a
+                                    href="https://www.instagram.com/0nus_on_us"
+                                    class="sns-symbols"
+                                    target="_blank">
                                     <img src="../static/images/onus_insta.png" alt="온어스인스타" class="sns-imgs">
                                 </a>
                                 <div class="sns-symbols">
@@ -205,60 +228,28 @@
                 </div>
             </section>
 
-            <!-- <section class="section-character sections" data-anchor="section-character">
-                <div class="backgrounds" id="character-background"></div>
-                <div class="container-xxl character-container">
-                    <div class="main-character-img">
-                        <img src="../static/images/dodudge-removebg.png" alt="도더지">
-                    </div>
-                    <div class="main-character-desc">
-                        <h2 class="strong">도고 + 두더지 = 도더지</h2>
-                        <div>
-                            <p>나는야 도고의 숨겨진 로컬 자원을 파헤치는 도더지! 서로를 연결하기 위한 땅굴을 파요.</p>
-                            <p>늘 모험을 꿈꾸며, 청년마을을 가꾸는 가드너랍니다.</p>
-                            <p>밤에는 도고살롱의 바텐더로 변신해요.</p>
-                            <p>온천하는 두더지, 본 적 있나요?</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="container-xxl section-onus sections" data-anchor="section-onus">
-                <div class="backgrounds background-bottom"></div>
-                <div class="main-onus-contents">
-                    <div class="onus-contents-top">
-                        <div class="main-onus-img">
-                            <img src="../static/images/onus_logo.png" alt="온어스로고">
-                        </div>
-                        <div class="onus-contents-top-right">
-                            <p>
-                                <span class="emphasize">사회적협동조합 온어스</span>는
-                            </p>
-                            <p>문화기획·디자인·인테리어·환경교육·사진·영상·공연·축제 등</p>
-                            <p>
-                                <span class="emphasize">다양한 업종의 청년 기업들이 모여 만든 사회적협동조합</span>입니다.</p>
-                        </div>
-                    </div>
-                    <div class="main-onus-desc">
-                        <p>
-                            <strong>우리는 일하고, 퇴근 후 함께 밥을 먹고, 고민을 나누는 과정에서 이렇게 생각했습니다.</strong>
-                        </p>
-                        <div class="emphasize">
-                            <div class="quotes">
-                                <i class="bi bi-quote"></i>
-                                <p>우리가 마을이 된다면 어떨까?</p>
-                                <i class="bi bi-quote" id="rotate_quote"></i>
-                            </div>
-                            <p>우리의 재능으로 지역을 변화시킨다면, 공존과 상생으로 살아갈 수 있지 않을까?</p>
-                        </div>
-                        <div class="text-center desc-center-text">
-                            <p>그리고 인구 소멸 위기 지역 도고면을 청년마을로,</p>
-                            <p>무엇이든 시도하고 살아보는 도고를 만들고자 합니다.</p>
-                        </div>
-                        <p class="emphasize">일하고, 쉬고, 놉시다!</p>
-                    </div>
-                </div>
-            </section> -->
+            <!-- <section class="section-character sections"
+            data-anchor="section-character"> <div class="backgrounds"
+            id="character-background"></div> <div class="container-xxl character-container">
+            <div class="main-character-img"> <img
+            src="../static/images/dodudge-removebg.png" alt="도더지"> </div> <div
+            class="main-character-desc"> <h2 class="strong">도고 + 두더지 = 도더지</h2> <div> <p>나는야
+            도고의 숨겨진 로컬 자원을 파헤치는 도더지! 서로를 연결하기 위한 땅굴을 파요.</p> <p>늘 모험을 꿈꾸며, 청년마을을 가꾸는
+            가드너랍니다.</p> <p>밤에는 도고살롱의 바텐더로 변신해요.</p> <p>온천하는 두더지, 본 적 있나요?</p> </div> </div>
+            </div> </section> <section class="container-xxl section-onus sections"
+            data-anchor="section-onus"> <div class="backgrounds background-bottom"></div>
+            <div class="main-onus-contents"> <div class="onus-contents-top"> <div
+            class="main-onus-img"> <img src="../static/images/onus_logo.png" alt="온어스로고">
+            </div> <div class="onus-contents-top-right"> <p> <span class="emphasize">사회적협동조합
+            온어스</span>는 </p> <p>문화기획·디자인·인테리어·환경교육·사진·영상·공연·축제 등</p> <p> <span
+            class="emphasize">다양한 업종의 청년 기업들이 모여 만든 사회적협동조합</span>입니다.</p> </div> </div>
+            <div class="main-onus-desc"> <p> <strong>우리는 일하고, 퇴근 후 함께 밥을 먹고, 고민을 나누는 과정에서
+            이렇게 생각했습니다.</strong> </p> <div class="emphasize"> <div class="quotes"> <i
+            class="bi bi-quote"></i> <p>우리가 마을이 된다면 어떨까?</p> <i class="bi bi-quote"
+            id="rotate_quote"></i> </div> <p>우리의 재능으로 지역을 변화시킨다면, 공존과 상생으로 살아갈 수 있지 않을까?</p>
+            </div> <div class="text-center desc-center-text"> <p>그리고 인구 소멸 위기 지역 도고면을
+            청년마을로,</p> <p>무엇이든 시도하고 살아보는 도고를 만들고자 합니다.</p> </div> <p class="emphasize">일하고,
+            쉬고, 놉시다!</p> </div> </div> </section> -->
 
         </main>
 

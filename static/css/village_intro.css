@@ -5,7 +5,7 @@
  ***************************************************************/
 
 :root {
-    --navbar-height: 50px;
+    --navbar-height: 90px;
     --sangsa-pt: 30px;
 }
 
@@ -32,7 +32,6 @@
 
 /**************** background components **************/
 .intro-back-carousel {
-    padding-top: var(--navbar-height);
     width: 100%;
     height: 100%;
     margin: 0;
@@ -44,7 +43,7 @@
 }
 
 .row-back-inner {
-    justify-content: center;
+    justify-content: space-around;
     height: 100%;
 }
 
@@ -153,6 +152,7 @@
  ***************************************************************/
 .section-salon {
     text-align: center;
+    padding-bottom: 0;
 }
 
 .salon-container {
