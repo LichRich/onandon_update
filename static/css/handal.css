@@ -1,17 +1,13 @@
 /* common */
-
 :root {
     --navbar-height: 90px;
-}
-
-.big-title {
-    padding-top: var(--navbar-height);
 }
 
 .big-title > h2 {
     font-size: 30px;
     font-weight: bold;
-    padding-top: var(--navbar-height);
+    padding-top: 20px;
+    color: #fff;
 }
 
 .small-titles {
@@ -23,8 +19,98 @@
     font-weight: bold;
 }
 
-/* subnav */
-.subnav {
+/* pips */
+.pg-pips {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    right: 15%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pg-pips ul {
+    margin: 0;
+    padding: 0;
+}
+
+.pg-pips ul li {
+    display: block;
+    width: 14px;
+    height: 13px;
+    margin: 20px;
+    position: relative;
+}
+
+.pg-pips ul li a span {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    height: 10px;
+    width: 10px;
+    border: 0;
+    background: #fff;
+    left: 50%;
+    top: 50%;
+    margin: -2px 0 0 -2px;
+    transition: all 0.1s ease-in-out;
+    font-size: 20px;
+    font-family: surround-air;
+}
+
+.pg-pips span:after {
+    background: rgba(255, 255, 255, 0.15);
+    position: absolute;
+    content: "";
+    display: block;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    border-radius: 100%;
+    transition: 0.3s;
+}
+
+.pg-pips li .active span {
+    background: #fff;
+    position: absolute;
+}
+
+.pg-pips li .active span:after {
+    top: -6px;
+    left: -6px;
+    bottom: -6px;
+    right: -6px;
+}
+
+.pg-pips ul li a {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    content: "how about this";
+}
+
+.pg-pips ul li a.active span,
+.pg-pips ul li:hover a.active span {
+    height: 20px;
+    width: 20px;
+    margin: -7px 0 0 -7px;
+    border-radius: 100%;
+}
+
+.pg-pips ul li:hover a span {
+    width: 15px;
+    height: 15px;
+    margin: -5px 0 0 -5px;
+}
+
+/* .subnav {
     position: fixed;
     top: var(--navbar-height);
     left: 0;
@@ -48,10 +134,10 @@
 }
 
 .sub-nav-items:active,
-.sub-nav-items:hover,
-.sub-nav-items:focus {
+.sub-nav-items:focus,
+.sub-nav-items:hover {
     color: #537dcf;
-}
+} */
 
 /* main */
 .section-intro {
@@ -75,12 +161,74 @@
     overflow-y: hidden;
 }
 
+.backgrounds::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.intro-bg {
+    width: fit-content;
+    margin: auto;
+}
+
 .backgrounds > img {
+    height: 100%;
+}
+
+/* page background */
+.bg-page {
+    position: fixed;
+    display: flex;
+    width: fit-content;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: -100;
+}
+
+.bg-page-box, #bg-page {
+    height: 100%;
+    margin: auto;
+}
+
+.bg-page-box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    opacity: 0.6;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* section info */
+.exp-rows {
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.exp-img-box {
+    padding: 0;
+}
+
+.exp-imgs {
+    width: 100%;
+    padding: 5%;
+    transition: all 0.2s ease;
+}
+
+.exp-imgs:hover {
+    cursor: pointer;
+    padding: 0;
+}
+
 .contents-row {
     padding-top: 10px;
 }
@@ -120,7 +268,8 @@
     text-align: center;
 }
 
-.carousel, .carousel-inner {
+.carousel,
+.carousel-inner {
     height: 100%;
     background-color: #fff;
 }
@@ -140,7 +289,9 @@
     background-color: #fff;
 }
 
-.ri-left, .ai-left, .pi-left {
+.ai-left,
+.pi-left,
+.ri-left {
     font-weight: bold;
 }
 
@@ -168,7 +319,8 @@
 }
 
 @media(max-width: 1200px) {
-    .schedule-card, .card-image {
+    .card-image,
+    .schedule-card {
         height: 100px;
     }
     .schedule-card {
@@ -235,7 +387,7 @@
     -webkit-transform: translateY(50%);
     -ms-transform: translateY(50%);
     transform: translateY(50%);
-    background-color:rgba(17, 17, 17, 0.6);
+    background-color: rgba(17, 17, 17, 0.6);
 }
 
 .schedule-caption {
@@ -248,7 +400,7 @@
     left: 0;
     text-align: center;
     overflow: hidden;
-    background-color:rgba(17, 17, 17, 0.6);
+    background-color: rgba(17, 17, 17, 0.6);
 }
 
 .schedule-title {
@@ -278,7 +430,7 @@
  *                                                             *
  ***************************************************************/
 .twins-container {
-    position:relative;
+    position: relative;
     display: flex;
     width: 100%;
     margin-top: 20px;
@@ -293,7 +445,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    background-color:rgba(17, 17, 17, 0.7);
+    background-color: rgba(17, 17, 17, 0.7);
     z-index: -5;
 }
 
@@ -301,7 +453,8 @@
     justify-content: space-between;
 }
 
-.twins-left, .twins-right {
+.twins-left,
+.twins-right {
     width: fit-content;
     padding: 20px 30px 20px 50px;
     border-radius: 30px;
@@ -351,6 +504,20 @@
 
 .icons-right {
     padding-top: 20px;
+}
+
+/* font-css */
+@font-face {
+    font-family: classic-type;
+    src: url(../fonts/cafe24_Classic/Cafe24Classictype.ttf);
+}
+@font-face {
+    font-family: danjung;
+    src: url(../fonts/cafe24_Danjung/Cafe24Danjunghae.ttf);
+}
+@font-face {
+    font-family: surround-air;
+    src: url(../fonts/cafe24_surroundAir/Cafe24SsurroundAir.ttf);
 }
 
 /***************************************************************
