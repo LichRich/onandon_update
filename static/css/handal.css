@@ -1,25 +1,35 @@
-/* common */
+/***************************************************************
+ *                                                             *
+ *                       Common features                       *
+ *                                                             *
+ ***************************************************************/
 :root {
     --navbar-height: 90px;
 }
 
 .big-title > h2 {
+    width: 70%;
+    margin: auto;
     font-size: 30px;
     font-weight: bold;
     padding-top: 20px;
     color: #fff;
 }
 
-.small-titles {
+/* .small-titles {
     padding-top: 20px;
 }
 
 .small-titles > h3 {
     font-size: 20px;
     font-weight: bold;
-}
+} */
 
-/* pips */
+/***************************************************************
+ *                                                             *
+ *                             Pips                            *
+ *                                                             *
+ ***************************************************************/
 .pg-pips {
     position: fixed;
     height: 100vh;
@@ -139,7 +149,11 @@
     color: #537dcf;
 } */
 
-/* main */
+/***************************************************************
+ *                                                             *
+ *                         Intro section                       *
+ *                                                             *
+ ***************************************************************/
 .section-intro {
     padding-top: var(--navbar-height);
     display: flex;
@@ -180,7 +194,11 @@
     height: 100%;
 }
 
-/* page background */
+/***************************************************************
+ *                                                             *
+ *                        Page Background                      *
+ *                                                             *
+ ***************************************************************/
 .bg-page {
     position: fixed;
     display: flex;
@@ -208,23 +226,41 @@
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* section info */
-.exp-rows {
-    justify-content: space-around;
-    padding: 20px 0;
+/***************************************************************
+ *                                                             *
+ *                            Modal                            *
+ *                                                             *
+ ***************************************************************/
+#modal-img {
+    width: 100%;
 }
 
-.exp-img-box {
+/***************************************************************
+ *                                                             *
+ *                      Experience section                     *
+ *                                                             *
+ ***************************************************************/
+.handal-contents {
+    width: 80%;
+    margin: auto;
+}
+
+.contents-rows {
+    justify-content: space-around;
+    /* padding: 20px 0; */
+}
+
+.contents-img-box {
     padding: 0;
 }
 
-.exp-imgs {
+.contents-imgs {
     width: 100%;
     padding: 5%;
     transition: all 0.2s ease;
 }
 
-.exp-imgs:hover {
+.contents-imgs:hover {
     cursor: pointer;
     padding: 0;
 }
@@ -301,14 +337,14 @@
 
 /***************************************************************
  *                                                             *
- *                        Schedule section                     *
+ *                         Living section                      *
  *                                                             *
  ***************************************************************/
-#section-schedule {
+#section-living {
     color: #fff;
 }
 
-.schedule-container {
+.living-container {
     margin-top: 30px;
 }
 
@@ -426,9 +462,57 @@
 
 /***************************************************************
  *                                                             *
- *                  Rule & Materials section                   *
+ *                         Apply section                       *
  *                                                             *
  ***************************************************************/
+.apply-container, .btn-apply-box {
+    width: 100%;
+    height: 100%;
+}
+
+.btn-apply-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-apply {
+    border: 2px solid #fff;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.btn-apply-text {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px 20px 10px 20px;
+    margin: 0;
+    transition: all 0.2s ease;
+}
+
+.btn-apply:hover {
+    border: 2px solid #11B359;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.btn-apply:hover .btn-apply-text {
+    color: #11B359;
+}
+
+.apply-character-box {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 30%;
+    /* height: 100%; */
+}
+
+#apply-img {
+    width: 100%;
+}
+
 .twins-container {
     position: relative;
     display: flex;

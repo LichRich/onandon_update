@@ -9,11 +9,13 @@ const pages = new Pageable("#container", {
         touch: true, // enable / disable touch / swipe scrolling
         keydown: true, // enable / disable keyboard navigation
     },
-    anchors: ["section-intro", "section-info", "section-schedule", "section-rule", "section-materials"],
+    anchors: ["section-intro", "section-exp", "section-living", "section-making", "section-apply"],
 });
 var max_index = pages.anchors.length - 1;
 
 let nav_items = $('.sub-nav-items');
+
+const img_srcs = ["../static/images/handal_images/modal_images/m_exp0.jpg", "../static/images/handal_images/modal_images/m_exp1.jpg", "../static/images/handal_images/modal_images/m_exp2.jpg", "../static/images/handal_images/modal_images/m_exp3.jpg", "../static/images/handal_images/modal_images/m_exp4.png", "../static/images/handal_images/modal_images/m_exp5.jpg", "../static/images/handal_images/modal_images/m_live0.jpg", "../static/images/handal_images/modal_images/m_live1.jpg", "../static/images/handal_images/modal_images/m_live2.png", "../static/images/handal_images/modal_images/m_live3.jpg", "../static/images/handal_images/modal_images/m_live4.jpg", "../static/images/handal_images/modal_images/m_live5.jpg", "../static/images/handal_images/modal_images/m_make0.jpg", "../static/images/handal_images/modal_images/m_make1.jpg", "../static/images/handal_images/modal_images/m_make2.jpg", "../static/images/handal_images/modal_images/m_make3.jpg", "../static/images/handal_images/modal_images/m_make4.jpg", "../static/images/handal_images/modal_images/m_make5.jpg"];
 
 $(document).ready(function () {
 
@@ -59,6 +61,10 @@ $(document).ready(function () {
     $('.scroll-up').click(function (e) {
         e.preventDefault();
         pages.scrollToPage(1);
+    });
+
+    $('.contents-imgs').click(function() {
+        $('#modal-img').attr('src', img_srcs[$('.contents-imgs').get().indexOf(this)]);
     });
 
 });
