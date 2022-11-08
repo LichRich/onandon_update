@@ -353,15 +353,3 @@ body::before {
     }
     
 }
-
-@media(min-width: 1200px) {
-    .navbar-container {
-        max-width: 960px;
-    }
-}
-
-@media(min-width: 1400px) {
-    .navbar-container {
-        max-width: 960px;
-    }
-}
