@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-    <!-- <head th:replace="layout/header :: head ('한 달 살이 안내서')"><link
+    <!-- <head th:replace="layout/header :: head ('마을살이')"><link
     rel="stylesheet" href="../static/css/handal.css"></head> -->
     <head th:fragment="head(title)">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 
         <!-- bootstrap -->
         <link
@@ -58,7 +58,7 @@
         <link rel="icon" type="image/x-icon" href="../static/favicons/favicon.ico">
         <link rel="manifest" href="../static/favicons/site.webmanifest">
 
-        <title th:text="${title}">도고청년마을</title>
+        <title th:text="${title}">마을살이</title>
     </head>
     <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
 
@@ -358,35 +358,36 @@
             </section>
 
             <section
-                class="container sections"
+                class="section-living sections"
                 id="section-living"
                 data-anchor="section-living">
-                <!-- <div class="backgrounds"></div> -->
-                <div class="container big-title" id="living-title">
-                    <h2>함께 살아가고</h2>
-                </div>
-                <!-- contents row -->
-                <div class="handal-contents contents-exp">
-                    <div class="row contents-rows">
-                        <div class="contents-img-box col-3">
-                            <img src="../static/images/handal_images/live0.png" alt="exp-img" class="contents-imgs" data-bs-toggle="modal" data-bs-target="#handal-modal">
-                        </div>
-                        <div class="contents-img-box col-3">
-                            <img src="../static/images/handal_images/live1.png" alt="exp-img" class="contents-imgs" data-bs-toggle="modal" data-bs-target="#handal-modal">
-                        </div>
-                        <div class="contents-img-box col-3">
-                            <img src="../static/images/handal_images/live2.png" alt="exp-img" class="contents-imgs" data-bs-toggle="modal" data-bs-target="#handal-modal">
-                        </div>
+                <div class="container contents-container">
+                    <div class="big-title" id="living-title">
+                        <h2>함께 살아가고</h2>
                     </div>
-                    <div class="row contents-rows">
-                        <div class="contents-img-box col-3">
-                            <img src="../static/images/handal_images/live3.png" alt="exp-img" class="contents-imgs" data-bs-toggle="modal" data-bs-target="#handal-modal">
+                    <!-- contents row -->
+                    <div class="handal-contents contents-exp">
+                        <div class="row contents-rows">
+                            <div class="contents-img-box col-3">
+                                <img src="../static/images/handal_images/live0.png" alt="exp-img" class="contents-imgs" data-bs-toggle="modal" data-bs-target="#handal-modal">
+                            </div>
+                            <div class="contents-img-box col-3">
+                                <img src="../static/images/handal_images/live1.png" alt="exp-img" class="contents-imgs" data-bs-toggle="modal" data-bs-target="#handal-modal">
+                            </div>
+                            <div class="contents-img-box col-3">
+                                <img src="../static/images/handal_images/live2.png" alt="exp-img" class="contents-imgs" data-bs-toggle="modal" data-bs-target="#handal-modal">
+                            </div>
                         </div>
-                        <div class="contents-img-box col-3">
-                            <img src="../static/images/handal_images/live4.png" alt="exp-img" class="contents-imgs" data-bs-toggle="modal" data-bs-target="#handal-modal">
-                        </div>
-                        <div class="contents-img-box col-3">
-                            <img src="../static/images/handal_images/live5.png" alt="exp-img" class="contents-imgs" data-bs-toggle="modal" data-bs-target="#handal-modal">
+                        <div class="row contents-rows">
+                            <div class="contents-img-box col-3">
+                                <img src="../static/images/handal_images/live3.png" alt="exp-img" class="contents-imgs" data-bs-toggle="modal" data-bs-target="#handal-modal">
+                            </div>
+                            <div class="contents-img-box col-3">
+                                <img src="../static/images/handal_images/live4.png" alt="exp-img" class="contents-imgs" data-bs-toggle="modal" data-bs-target="#handal-modal">
+                            </div>
+                            <div class="contents-img-box col-3">
+                                <img src="../static/images/handal_images/live5.png" alt="exp-img" class="contents-imgs" data-bs-toggle="modal" data-bs-target="#handal-modal">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -440,34 +441,36 @@
             </section>
 
             <section
-                class="container sections"
+                class="section-making sections"
                 id="section-making"
                 data-anchor="section-making">
-                <div class="container big-title" id="making-title">
-                    <h2>함께 만들어가는 팀 프로젝트</h2>
-                </div>
-                <!-- contents row -->
-                <div class="handal-contents contents-exp">
-                    <div class="row contents-rows">
-                        <div class="contents-img-box col-3">
-                            <img src="../static/images/handal_images/make0.png" alt="exp-img" class="contents-imgs" data-bs-toggle="modal" data-bs-target="#handal-modal">
-                        </div>
-                        <div class="contents-img-box col-3">
-                            <img src="../static/images/handal_images/make1.png" alt="exp-img" class="contents-imgs" data-bs-toggle="modal" data-bs-target="#handal-modal">
-                        </div>
-                        <div class="contents-img-box col-3">
-                            <img src="../static/images/handal_images/make2.png" alt="exp-img" class="contents-imgs" data-bs-toggle="modal" data-bs-target="#handal-modal">
-                        </div>
+                <div class="container contents-container">
+                    <div class="big-title" id="making-title">
+                        <h2>함께 만들어가는 팀 프로젝트</h2>
                     </div>
-                    <div class="row contents-rows">
-                        <div class="contents-img-box col-3">
-                            <img src="../static/images/handal_images/make3.png" alt="exp-img" class="contents-imgs" data-bs-toggle="modal" data-bs-target="#handal-modal">
+                    <!-- contents row -->
+                    <div class="handal-contents contents-exp">
+                        <div class="row contents-rows">
+                            <div class="contents-img-box col-3">
+                                <img src="../static/images/handal_images/make0.png" alt="exp-img" class="contents-imgs" data-bs-toggle="modal" data-bs-target="#handal-modal">
+                            </div>
+                            <div class="contents-img-box col-3">
+                                <img src="../static/images/handal_images/make1.png" alt="exp-img" class="contents-imgs" data-bs-toggle="modal" data-bs-target="#handal-modal">
+                            </div>
+                            <div class="contents-img-box col-3">
+                                <img src="../static/images/handal_images/make2.png" alt="exp-img" class="contents-imgs" data-bs-toggle="modal" data-bs-target="#handal-modal">
+                            </div>
                         </div>
-                        <div class="contents-img-box col-3">
-                            <img src="../static/images/handal_images/make4.png" alt="exp-img" class="contents-imgs" data-bs-toggle="modal" data-bs-target="#handal-modal">
-                        </div>
-                        <div class="contents-img-box col-3">
-                            <img src="../static/images/handal_images/make5.png" alt="exp-img" class="contents-imgs" data-bs-toggle="modal" data-bs-target="#handal-modal">
+                        <div class="row contents-rows">
+                            <div class="contents-img-box col-3">
+                                <img src="../static/images/handal_images/make3.png" alt="exp-img" class="contents-imgs" data-bs-toggle="modal" data-bs-target="#handal-modal">
+                            </div>
+                            <div class="contents-img-box col-3">
+                                <img src="../static/images/handal_images/make4.png" alt="exp-img" class="contents-imgs" data-bs-toggle="modal" data-bs-target="#handal-modal">
+                            </div>
+                            <div class="contents-img-box col-3">
+                                <img src="../static/images/handal_images/make5.png" alt="exp-img" class="contents-imgs" data-bs-toggle="modal" data-bs-target="#handal-modal">
+                            </div>
                         </div>
                     </div>
                 </div>

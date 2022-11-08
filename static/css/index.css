@@ -53,6 +53,22 @@
     padding: 0;
 }
 
+.intro-from {
+    margin-top: 20px;
+    padding-top: var(--navbar-height);
+}
+
+.intro-from-content {
+    padding-left: 10px;
+    text-align: left;
+    font-size: 25px;
+    color: #fff;
+}
+
+.intro-from-name {
+    font-weight: bold;
+}
+
 #intro-back-carousel,
 .intro-back-inner {
     width: fit-content;
@@ -198,6 +214,7 @@
 
 .sns-contents-row {
     margin: auto;
+    margin-top: 30px;
     height: 100%;
 }
 
@@ -209,11 +226,7 @@
 .sns-symbols {
     display: block;
     margin: 50px;
-}
-
-.sns-symbols:first-child,
-.sns-symbols:nth-child(2) {
-    margin-top: 20px;
+    height: 50%;
 }
 
 .sns-imgs {

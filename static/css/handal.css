@@ -242,11 +242,18 @@
  ***************************************************************/
 .handal-contents {
     width: 80%;
+    height: 100%;
     margin: auto;
+}
+
+.contents-container {
+    height: 100%;
 }
 
 .contents-rows {
     justify-content: space-around;
+    height: 50%;
+    align-items: center;
     /* padding: 20px 0; */
 }
 
@@ -354,13 +361,16 @@
     }
 }
 
-@media(max-width: 1200px) {
+@media(max-width: 1500px) {
     .card-image,
     .schedule-card {
         height: 100px;
     }
     .schedule-card {
         margin: 10px 0;
+    }
+    .pg-pips {
+        opacity: 0;
     }
 }
 

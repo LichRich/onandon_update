@@ -18,6 +18,17 @@
     font-weight: bold;
 }
 
+.backgrounds {
+    width: fit-content;
+    margin: auto;
+    background-color: #000;
+}
+
+.background-imgs {
+    opacity: 0.5;
+    height: 100vh;
+}
+
 /***************************************************************
  *                                                             *
  *                          intro section                      *
@@ -30,41 +41,141 @@
     color: #fff;
 }
 
-/**************** background components **************/
-.intro-back-carousel {
+#intro-background-cover {
+    background-color: #000;
+    width: fit-content;
+    margin: auto;
+}
+
+.intro-container {
+    height: 40vh;
+}
+
+/***************************************************************
+ *                                                             *
+ *                       character section                     *
+ *                                                             *
+ ***************************************************************/
+#section-character {
+    padding-bottom: 0;
+}
+
+#character-bg {
+    opacity: 0.7;
+}
+
+.character-container {
+    position: relative;
+}
+
+.character-dodudge-box {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    right: 0;
+    width: 55%;
+    height: 55%;
+    align-items: center;
+}
+
+#dodudge {
+    width: 100%;
+}
+
+.character-dodudge-box {
+    text-align: right;
+}
+
+/***************************************************************
+ *                                                             *
+ *                         plan section                        *
+ *                                                             *
+ ***************************************************************/
+.plan-title {
+    width: 100%;
+    padding-top: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+.row-plan {
+    margin-top: 20px;
+    height: 100%;
+}
+
+.plan-contents {
+    position: relative;
+    padding: 0;
+    transition: all 0.2s ease;
+}
+
+.plan-img-box {
+    height: 100%;
+}
+
+.plan-imgs {
     width: 100%;
     height: 100%;
-    margin: 0;
+    transition: all 0.2s ease;
 }
 
-.intro-back-inner {
+.plan-desc {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+    z-index: 100;
+    opacity: 0;
+}
+
+.plan-desc p {
+    text-align: center;
+}
+
+.plan-d-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.plan-d-category {
+    font-size: 40px;
+    font-family: ohsquare;
+}
+
+.plan-d-content {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.plan-contents:hover {
+    border: 2px solid #fff;
+}
+
+.plan-img-box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: all 0.2s ease;
 }
 
-.row-back-inner {
-    justify-content: space-around;
+.plan-contents:hover .plan-img-box::after {
+    opacity: 1;
+}
+
+.plan-contents:hover .plan-desc {
     height: 100%;
-}
-
-.c-item-custom {
-    padding: 0 20px;
-    width: 100%;
-    height: 100%;
-}
-
-.carousel-imgs {
-    width: 100%;
-    height: 100%;
-}
-
-.intro-back-inner .active.carousel-item-end,
-.intro-back-inner .carousel-item-next:not(.carousel-item-start) {
-    transform: translateY(-100%);
-}
-.intro-back-inner .active.carousel-item-start,
-.intro-back-inner .carousel-item-prev:not(.carousel-item-end) {
-    transform: translateY(100%);
+    opacity: 1;
 }
 
 /***************************************************************
@@ -131,20 +242,6 @@
     font-size: 21px;
 }
 
-.backgrounds::after {
-    position: absolute;
-    content: ' ';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(17, 17, 17, 0.6);
-}
-
-#sangsa-background {
-    width: 100%;
-}
-
 /***************************************************************
  *                                                             *
  *                          salon section                      *
@@ -177,47 +274,20 @@
     font-size: 25px;
 }
 
-#img-salon {
-    width: 100%;
-}
-
 /***************************************************************
  *                                                             *
- *                       according to width                    *
+ *                          font-css                           *
  *                                                             *
  ***************************************************************/
-@media(max-width: 576px) {
-    .main-onus-contents {
-        width: 100%;
-    }
+ @font-face {
+    font-family: dangdang;
+    src: url(../fonts/cafe24_dangdang/Cafe24Dangdanghae.ttf);
 }
-
-@media(min-width: 576px) {
-    .main-onus-contents {
-        width: 540px;
-    }
+@font-face {
+    font-family: ohsquare;
+    src: url(../fonts/cafe24_ohsquare/Cafe24Ohsquare.ttf);
 }
-
-@media(min-width: 768px) {
-    .main-onus-contents {
-        width: 720px;
-    }
-}
-
-@media(min-width: 992px) {
-    .main-onus-contents {
-        width: 960px;
-    }
-}
-
-@media(min-width: 1200px) {
-    .main-onus-contents {
-        width: 1140px;
-    }
-}
-
-@media(min-width: 1400px) {
-    .main-onus-contents {
-        width: 1320px;
-    }
+@font-face {
+    font-family: surround-air;
+    src: url(../fonts/cafe24_surroundAir/Cafe24SsurroundAir.ttf);
 }

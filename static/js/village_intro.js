@@ -9,7 +9,7 @@ const pages = new Pageable("#container", {
         touch: true, // enable / disable touch / swipe scrolling
         keydown: true, // enable / disable keyboard navigation
     },
-    anchors: ["section-intro", "section-sangsa", "section-salon"],
+    anchors: ["section-intro", "section-character", "section-plan", "section-sangsa", "section-salon"],
 });
 var max_index = pages.anchors.length - 1;
 

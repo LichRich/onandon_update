@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- <head th:replace="layout/header :: head ('도고청년마을')"><link rel="stylesheet"
+    <!-- <head th:replace="layout/header :: head ('도고온천마을')"><link rel="stylesheet"
     href="../static/css/index.css"></head> -->
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 
         <!-- bootstrap -->
         <link
@@ -58,7 +58,7 @@
         <link rel="icon" type="image/x-icon" href="../static/favicons/favicon.ico">
         <link rel="manifest" href="../static/favicons/site.webmanifest">
 
-        <title>도고청년마을</title>
+        <title>도고온천마을</title>
     </head>
     <body
         oncontextmenu="return false"
@@ -123,6 +123,9 @@
                 data-anchor="section-intro"
                 tabindex="-1">
                 <div class="container-xxl container-intro">
+                    <div class="intro-from">
+                        <p class="intro-from-content">From. <span class="intro-from-name">도고온천마을</span></p>
+                    </div>
                     <div class="backgrounds" id="intro-background">
                         <div
                             id="intro-back-carousel"
@@ -131,25 +134,22 @@
                             <div class="carousel-inner intro-back-inner">
                                 <div class="carousel-item i-b-c-item-custom active" data-bs-interval="2000">
                                     <div class="intro-back-img">
-                                        <img src="../static/images/intro_bg0.jpg" alt="intro background image">
+                                        <img src="../static/images/intro_bg0.jpg" alt="intro background image" class="intro-bg">
                                     </div>
                                 </div>
                                 <div class="carousel-item i-b-c-item-custom" data-bs-interval="2000">
                                     <div class="intro-back-img">
-                                        <img src="../static/images/intro_bg1.jpg" alt="intro background image">
+                                        <img src="../static/images/intro_bg1.jpg" alt="intro background image" class="intro-bg">
                                     </div>
                                 </div>
                                 <div class="carousel-item i-b-c-item-custom" data-bs-interval="2000">
                                     <div class="intro-back-img">
-                                        <img src="../static/images/intro_bg2.jpg" alt="intro background image">
+                                        <img src="../static/images/intro_bg2.jpg" alt="intro background image" class="intro-bg">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="intro-contents"> <div class="intro-logo"> <img
-                    src="../static/images/dogoon1000_logo-removebg.png" alt="도고온천로고"> </div> </div>
-                    -->
                 </div>
             </section>
 
@@ -191,7 +191,7 @@
                     </div>
                     <div class="sns-contents">
                         <div class="row sns-contents-row">
-                            <div class="col-lg-6 sns-dogo">
+                            <div class="col-6 sns-dogo">
                                 <div class="sns-dogo-title">
                                     <p class="sns-title-text">도고온천마을 SNS</p>
                                 </div>
@@ -208,7 +208,7 @@
                                     <img src="../static/images/dogo_onair.png" alt="도고온에어" class="sns-imgs">
                                 </a>
                             </div>
-                            <div class="col-lg-6 sns-onus">
+                            <div class="col-6 sns-onus">
                                 <div class="sns-dogo-title">
                                     <p class="sns-title-text">온어스 Contact</p>
                                 </div>

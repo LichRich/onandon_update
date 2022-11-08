@@ -17,6 +17,10 @@ html, body {
     -ms-overflow-style: none;
 }
 
+body {
+    background-color: #fff;
+}
+
 a {
     text-decoration: none;
 }
@@ -109,7 +113,7 @@ body::before {
     width: 100vw;
     height: 100vh;
     z-index: -5;
-    background-color: rgba(0, 0, 0, 0.7);
+    /* background-color: rgba(0, 0, 0, 0.7); */
 }
 
 #form-search {
@@ -298,6 +302,12 @@ body::before {
  *                      According to width                     *
  *                                                             *
  ***************************************************************/
+.container, .container-xxl {
+    width: 1320px;
+    max-width: 1320px !important;
+}
+
+
 @media(max-width: 576px) {
     .main-onus-contents {
         width: 100%;

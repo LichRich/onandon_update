@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-    <!-- <head th:replace="layout/header :: head ('마을계획')"></head> -->
+    <!-- <head th:replace="layout/header :: head ('도고온천마을소개')"></head> -->
     <head th:fragment="head(title)">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 
         <!-- bootstrap -->
         <link
@@ -121,46 +121,80 @@
                 id="section-intro"
                 data-anchor="section-intro">
                 <div class="backgrounds" id="intro-background-cover">
-                    <div
-                        id="intro-background-carousel"
-                        class="carousel intro-back-carousel slide"
-                        data-bs-ride="carousel">
-                        <div
-                            class="carousel-inner intro-back-inner plants-inner"
-                            data-bs-interval="200">
-                            <div class="carousel-item c-item-custom active">
-                                <div class="row row-back-inner">
-                                    <div class="box-plants col-lg-4 img-boxes">
-                                        <img src="../static/images/plant1.JPG" alt="" class="carousel-imgs plants-imgs">
-                                    </div>
-                                    <div class="box-animals col-lg-4 img-boxes">
-                                        <img src="../static/images/animal2.jpg" alt="" class="carousel-imgs animal-imgs">
-                                    </div>
-                                    <div class="box-people col-lg-4 img-boxes">
-                                        <img src="../static/images/people1_cut.png" alt="" class="carousel-imgs people-imgs">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item c-item-custom">
-                                <div class="row row-back-inner">
-                                    <div class="box-plants col-lg-4 img-boxes">
-                                        <img src="../static/images/plant2.jpg" alt="" class="carousel-imgs plants-imgs">
-                                    </div>
-                                    <div class="box-animals col-lg-4 img-boxes">
-                                        <img src="../static/images/animal3.jpg" alt="" class="carousel-imgs animal-imgs">
-                                    </div>
-                                    <div class="box-people col-lg-4 img-boxes">
-                                        <img src="../static/images/people2.jpg" alt="" class="carousel-imgs people-imgs">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <img src="../static/images/village_images/intro_bg.png" alt="마을소개 배경" id="intro-bg" class="background-imgs">
                 </div>
                 <div class="container intro-container">
                     <div class="plan-title intro-contents">
                         <h2 class="emphasize">DOGO 온천 마을 소개</h2>
                     </div>
+                </div>
+            </section>
+
+            <section
+                class="sections section-character"
+                id="section-character"
+                data-anchor="section-character">
+                <div class="container character-container container-contents">
+                    <div class="character-dodudge-box">
+                        <img src="../static/images/village_images/dodudge_intro.png" alt="dodudge" id="dodudge">
+                    </div>
+                </div>
+                <div class="backgrounds background-character">
+                    <img
+                        src="../static/images/village_images/logos_w_padding.png"
+                        alt="logos"
+                        id="character-bg"
+                        class="background-imgs">
+                </div>
+            </section>
+
+            <section
+                class="sections section-paln"
+                id="section-plan"
+                data-anchor="section-plan">
+                <div class="container plan-container">
+                    <div class="plan-title">
+                        <h2 class="emphasize">"식물, 동물 그리고 사람이 행복한 DOGO 온천 마을"</h2>
+                    </div>
+                    <div class="row row-plan">
+                        <div class="col-4 plan-left plan-contents">
+                            <div class="plan-img-box">
+                                <img src="../static/images/village_images/plan_plant_compressed.jpg" alt="" class="plan-imgs">
+                            </div>
+                            <div class="plan-desc">
+                                <p class="plan-d-title">1년차</p>
+                                <p class="plan-d-category">식물</p>
+                                <p class="plan-d-content">원예, 농업</p>
+                            </div>
+                        </div>
+                        <div class="col-4 plan-center plan-contents">
+                            <div class="plan-img-box">
+                                <img src="../static/images/village_images/plan_animal_compressed.jpg" alt="" class="plan-imgs">
+                            </div>
+                            <div class="plan-desc">
+                                <p class="plan-d-title">2년차</p>
+                                <p class="plan-d-category">동물</p>
+                                <p class="plan-d-content">유기동물, 반려동물 사업<br>동행 리빙랩</p>
+                            </div>
+                        </div>
+                        <div class="col-4 plan-right plan-contents">
+                            <div class="plan-img-box">
+                                <img src="../static/images/village_images/plan_people_compressed.jpg" alt="" class="plan-imgs">
+                            </div>
+                            <div class="plan-desc">
+                                <p class="plan-d-title">1~3년차</p>
+                                <p class="plan-d-category">공동체</p>
+                                <p class="plan-d-content">창업, 공유공간 거리조성</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="backgrounds plan-back">
+                    <img
+                        src="../static/images/village_images/white_box.png"
+                        alt="흰바탕"
+                        id="white_box"
+                        class="background-imgs">
                 </div>
             </section>
             
@@ -193,13 +227,13 @@
                                 </div>
                                 <div class="carousel-inner sangsa-carousel-inner">
                                     <div class="carousel-item imgs active" data-bs-interval="2000">
-                                        <img src="../static/images/sangsa_front0.jpg" alt="ㄷㄱㅅㅅ1">
+                                        <img src="../static/images/village_images/sangsa_front0.jpg" alt="ㄷㄱㅅㅅ1">
                                     </div>
                                     <div class="carousel-item imgs" data-bs-interval="2000">
-                                        <img src="../static/images/sangsa_front1.jpg" alt="ㄷㄱㅅㅅ2">
+                                        <img src="../static/images/village_images/sangsa_front1.jpg" alt="ㄷㄱㅅㅅ2">
                                     </div>
                                     <div class="carousel-item imgs" data-bs-interval="2000">
-                                        <img src="../static/images/sangsa_inner.png" alt="ㄷㄱㅅㅅ내부">
+                                        <img src="../static/images/village_images/sangsa_inner.png" alt="ㄷㄱㅅㅅ내부">
                                     </div>
                                 </div>
                             </div>
@@ -224,7 +258,7 @@
                 </div>
                 <div class="backgrounds sangsa-back">
                     <img
-                        src="../static/images/sangsa_back.jpg"
+                        src="../static/images/village_images/sangsa_back.jpg"
                         alt="도고상사배경"
                         id="sangsa-background"
                         class="background-imgs">
@@ -245,7 +279,7 @@
                 </div>
                 <div class="backgrounds background-salon">
                     <img
-                        src="../static/images/dogo_salon_cut.jpg"
+                        src="../static/images/village_images/dogo_salon_bg.jpg"
                         alt="도고살롱"
                         id="img-salon"
                         class="background-imgs">
@@ -291,6 +325,6 @@
         </div>
 
         <script src="../static/js/common.js" type="text/javascript"></script>
-        <script src="../static/js/village_plan.js"></script>
+        <script src="../static/js/village_intro.js"></script>
     </body>
 </html>
