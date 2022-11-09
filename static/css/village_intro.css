@@ -66,24 +66,22 @@
 
 .character-container {
     position: relative;
+    padding: 0;
 }
 
 .character-dodudge-box {
     position: absolute;
     display: flex;
     bottom: 0;
-    right: 0;
-    width: 55%;
+    right: -50px;
+    width: 60%;
     height: 55%;
     align-items: center;
+    text-align: right;
 }
 
 #dodudge {
     width: 100%;
-}
-
-.character-dodudge-box {
-    text-align: right;
 }
 
 /***************************************************************
@@ -211,13 +209,14 @@
     position: relative;
     display: flex;
     height: 100%;
+    padding-right: 0;
 }
 
 .sangsa-title {
     position: absolute;
     width: 100%;
     top: var(--navbar-height);
-    padding-top: var(--sangsa-pt);
+    /* padding-top: var(--sangsa-pt); */
     text-align: center;
 }
 
@@ -230,16 +229,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-right: 0;
 }
 
 .sangsa-desc {
     width: fit-content;
     margin: auto;
-    font-size: 18px;
+    font-size: 1rem;
 }
 
 .sangsa-desc .emphasize {
-    font-size: 21px;
+    font-size: 1.2rem;
 }
 
 /***************************************************************

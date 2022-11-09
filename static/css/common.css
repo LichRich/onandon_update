@@ -12,8 +12,7 @@
 }
 
 html, body {
-    overflow-y: scroll;
-    overflow-x: hidden;
+    overflow: hidden;
     -ms-overflow-style: none;
 }
 
@@ -302,12 +301,6 @@ body::before {
  *                      According to width                     *
  *                                                             *
  ***************************************************************/
-.container, .container-xxl {
-    width: 1320px;
-    max-width: 1320px !important;
-}
-
-
 @media(max-width: 576px) {
     .main-onus-contents {
         width: 100%;
@@ -352,4 +345,10 @@ body::before {
         flex-direction: column;
     }
     
+}
+
+@media(max-width: 1600px) {
+    .navbar-container, .container, .container-xxl {
+        max-width: 960px;
+    }
 }

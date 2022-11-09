@@ -218,6 +218,10 @@
     height: 100%;
 }
 
+.sns-dogo, .sns-onus {
+    height: 100%;
+}
+
 .sns-title-text {
     font-size: 30px;
     font-weight: bolder;
@@ -230,16 +234,20 @@
 }
 
 .sns-imgs {
-    width: 350px;
+    width: 300px;
     transition: all 0.3s ease;
 }
 
+#onus-logo {
+    height: 40%;
+}
+
 .sns-symbols:hover .sns-imgs {
-    width: 400px;
+    width: 350px;
 }
 
 .onus-email {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
 }
 

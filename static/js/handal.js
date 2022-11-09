@@ -21,8 +21,6 @@ $(document).ready(function () {
 
     var prev = now = pages.index;
 
-    navColorChange(now);
-
     if (pages.index > 0) {
         $('.scroll-up').fadeIn();
     }
@@ -47,8 +45,6 @@ $(document).ready(function () {
         prev = now;
         now = pages.index;
 
-        navColorChange(now);
-
         if (now == 0) {
             $('.scroll-up').fadeOut();
         } else if (now == max_index) {
@@ -68,23 +64,3 @@ $(document).ready(function () {
     });
 
 });
-
-function navColorChange(index) {
-
-    $(nav_items).each(function() {
-        var prev_color;
-        $(this).css('color','#333');
-        $(this).hover(function() {
-            prev_color = $(this).css('color');
-            $(this).css('color', '#537dcf');
-        }, function() {
-            $(this).css('color', prev_color);
-        }, );
-    });
-
-    if(index > 0) {
-        $(nav_items[index-1]).css('color','#74c84c');
-    }
-
-    
-}
